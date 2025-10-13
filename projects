@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mes projets - Jules Renard</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Mes Projets</h1>
+  </header>
+
+  <nav>
+    <a href="index.html">À propos</a>
+    <a href="projets.html">Projets</a>
+    <a href="interets.html">Centres d’intérêt</a>
+  </nav>
+
+  <main>
+    <section>
+      <h2>Projet en cours : StructurAll'X Web</h2>
+      <p>
+        Ce projet vise à <strong>lier une application Java à un site web</strong> afin de traduire n’importe quel langage
+        informatique en représentation graphique, puis de le retransformer dans un autre langage.
+      </p>
+      <p>
+        Le but est d’aider à la compréhension et la conversion de structures de code en offrant une
+        visualisation claire et interactive.
+      </p>
+      <p><em>Rôle :</em> développement web et intégration de l’API Java.</p>
+    </section>
+
+    <section>
+      <h2>Projet réalisé : Jeu Problème</h2>
+      <p>
+        Dans le cadre de ma formation, j’ai participé à la réalisation d’un jeu nommé
+        <strong>“Jeu Problème”</strong>. Ce projet m’a permis de mettre en pratique mes connaissances en programmation
+        et en logique algorithmique.
+      </p>
+      <p>
+        Le jeu proposait des défis interactifs de type “MOTUS”, encourageant la réflexion et la logique.
+      </p>
+    </section>
+
+    <section>
+      <h2>Autres réalisations</h2>
+      <ul>
+        <li>Création d’un livre audio pour personnes atteintes de troubles visuels et dys.</li>
+        <li>Développement d’applications simples en Java et Python pour la formation.</li>
+      </ul>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 Jules Renard</p>
+  </footer>
+</body>
+</html>
