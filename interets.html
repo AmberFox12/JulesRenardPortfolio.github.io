@@ -3,57 +3,152 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Centres d’intérêt - Jules Renard</title>
+  <meta name="description" content="Découvrez mes passions : impression 3D, jeux vidéo, technologies et plus encore">
+  <title>Centres d'intérêt - Jules Renard</title>
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 <body>
+  <!-- Bouton mode sombre -->
+  <button id="theme-toggle" class="theme-toggle" aria-label="Changer de thème">
+    <i class="fas fa-moon"></i>
+  </button>
+
   <header>
-    <h1>Mes Centres d’intérêt</h1>
+    <div class="header-content">
+      <h1>Mes Centres d'intérêt</h1>
+      <p>Ce qui me passionne au quotidien</p>
+    </div>
   </header>
 
   <nav>
-    <a href="index.html">À propos</a>
-    <a href="projets.html">Projets</a>
-    <a href="interets.html">Centres d’intérêt</a>
+    <div class="nav-container">
+      <a href="index.html">À propos</a>
+      <a href="projets.html">Projets</a>
+      <a href="interets.html" class="active">Centres d'intérêt</a>
+    </div>
+    <button class="menu-toggle" aria-label="Menu">
+      <i class="fas fa-bars"></i>
+    </button>
   </nav>
 
   <main>
     <section>
-      <h2>Veille technologique : les voitures électriques</h2>
-      <p>
-        J’ai réalisé une veille d’information sur l’évolution des <strong>voitures électriques</strong>,
-        notamment sur les avancées technologiques en matière de batteries, d’autonomie et de recyclage.
-      </p>
-    </section>
+      <h2><i class="fas fa-star"></i> Mes Passions</h2>
 
-    <section>
-      <h2>Impression 3D</h2>
-      <p>
-        Je possède une <strong>imprimante 3D</strong> personnelle, que j’utilise pour fabriquer des
-        pièces sur mesure, des prototypes et des objets décoratifs. Cela me permet de lier créativité
-        et technologie.
-      </p>
-    </section>
+      <div class="interests-grid">
+        <!-- Intérêt 1 -->
+        <div class="interest-card">
+          <div class="interest-icon">
+            <i class="fas fa-car-battery"></i>
+          </div>
+          <h3>Veille Technologique</h3>
+          <h4>Voitures Électriques</h4>
+          <p>
+            J'effectue une veille d'information sur l'évolution des <strong>voitures électriques</strong>,
+            notamment sur les avancées technologiques en matière de :
+          </p>
+          <ul>
+            <li><i class="fas fa-battery-full"></i> Batteries nouvelle génération</li>
+            <li><i class="fas fa-route"></i> Autonomie et recharge rapide</li>
+            <li><i class="fas fa-recycle"></i> Recyclage et durabilité</li>
+          </ul>
+        </div>
 
-    <section>
-      <h2>Jeux vidéo</h2>
-      <p>
-        Passionné de jeux vidéo, j’aime explorer différents univers et comprendre les mécaniques de
-        gameplay. Cela alimente également mon intérêt pour la conception de jeux et la programmation.
-      </p>
-    </section>
+        <!-- Intérêt 2 -->
+        <div class="interest-card">
+          <div class="interest-icon">
+            <i class="fas fa-cube"></i>
+          </div>
+          <h3>Impression 3D</h3>
+          <p>
+            Je possède une <strong>imprimante 3D</strong> personnelle que j'utilise pour :
+          </p>
+          <ul>
+            <li><i class="fas fa-wrench"></i> Fabriquer des pièces sur mesure</li>
+            <li><i class="fas fa-lightbulb"></i> Créer des prototypes</li>
+            <li><i class="fas fa-palette"></i> Réaliser des objets décoratifs</li>
+          </ul>
+          <p class="highlight">
+            <i class="fas fa-magic"></i> Un parfait mélange de créativité et de technologie !
+          </p>
+        </div>
 
-    <section>
-      <h2>Autres passions</h2>
-      <ul>
-        <li>Lecture de mangas et de bandes dessinées (souvent en anglais)</li>
-        <li>Musique et handball</li>
-      </ul>
+        <!-- Intérêt 3 -->
+        <div class="interest-card">
+          <div class="interest-icon">
+            <i class="fas fa-gamepad"></i>
+          </div>
+          <h3>Jeux Vidéo</h3>
+          <p>
+            Passionné de jeux vidéo, j'aime :
+          </p>
+          <ul>
+            <li><i class="fas fa-globe"></i> Explorer différents univers virtuels</li>
+            <li><i class="fas fa-cogs"></i> Comprendre les mécaniques de gameplay</li>
+            <li><i class="fas fa-code"></i> Analyser la conception de jeux</li>
+          </ul>
+          <p class="highlight">
+            <i class="fas fa-book-open"></i> Cela alimente mon intérêt pour la programmation de jeux
+          </p>
+        </div>
+
+        <!-- Intérêt 4 -->
+        <div class="interest-card">
+          <div class="interest-icon">
+            <i class="fas fa-book-reader"></i>
+          </div>
+          <h3>Lecture</h3>
+          <p>
+            Grand amateur de lecture, particulièrement :
+          </p>
+          <ul>
+            <li><i class="fas fa-dragon"></i> Mangas japonais</li>
+            <li><i class="fas fa-mask"></i> Bandes dessinées</li>
+            <li><i class="fas fa-language"></i> Lectures en anglais</li>
+          </ul>
+        </div>
+
+        <!-- Intérêt 5 -->
+        <div class="interest-card">
+          <div class="interest-icon">
+            <i class="fas fa-music"></i>
+          </div>
+          <h3>Musique</h3>
+          <p>
+            La musique fait partie intégrante de mon quotidien. J'aime découvrir de nouveaux
+            artistes et styles musicaux variés.
+          </p>
+        </div>
+
+        <!-- Intérêt 6 -->
+        <div class="interest-card">
+          <div class="interest-icon">
+            <i class="fas fa-running"></i>
+          </div>
+          <h3>Handball</h3>
+          <p>
+            Pratique du handball pour :
+          </p>
+          <ul>
+            <li><i class="fas fa-users"></i> L'esprit d'équipe</li>
+            <li><i class="fas fa-heartbeat"></i> Rester actif</li>
+            <li><i class="fas fa-trophy"></i> Le dépassement de soi</li>
+          </ul>
+        </div>
+      </div>
     </section>
   </main>
 
   <footer>
-    <p>© 2025 Jules Renard</p>
+    <p>© 2025 Jules Renard | Créé avec passion</p>
+    <p class="footer-links">
+      <a href="#" onclick="scrollToTop(); return false;">
+        <i class="fas fa-arrow-up"></i> Haut de page
+      </a>
+    </p>
   </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
