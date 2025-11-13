@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Portfolio de Jules Renard, étudiant en BTS SIO passionné par le développement web et l'informatique">
+  <meta name="keywords" content="Jules Renard, BTS SIO, développeur, portfolio, Java, Python, Angular">
+  <meta name="author" content="Jules Renard">
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://julesrenardportfolio.github.io/">
+  <meta property="og:title" content="Jules Renard - Portfolio">
+  <meta property="og:description" content="Étudiant en BTS SIO | Passionné d'informatique et de développement">
+
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:title" content="Jules Renard - Portfolio">
+  <meta property="twitter:description" content="Étudiant en BTS SIO | Passionné d'informatique et de développement">
+
+  <title>Jules Renard - Portfolio</title>
+
+  <!-- Polices Prairie Printanière -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Josefin+Slab:wght@300;400;600&family=Cormorant+Garamond:wght@400;500;600&family=Lora:wght@400;500&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+  <!-- Bouton mode sombre -->
+  <button id="theme-toggle" class="theme-toggle" aria-label="Changer de thème">
+    <i class="fas fa-moon"></i>
+  </button>
+
+  <header>
+    <div class="header-content">
+      <h1>Jules Renard</h1>
+      <p>Étudiant en BTS SIO | Passionné d'informatique et de développement</p>
+      <div class="header-links">
+        <a href="https://github.com/AmberFox12" target="_blank" rel="noopener noreferrer" class="social-link">
+          <i class="fab fa-github"></i>
+        </a>
+        <a href="https://www.linkedin.com/in/jules-renard-60a448257/" target="_blank" rel="noopener noreferrer" class="social-link">
+          <i class="fab fa-linkedin"></i>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <nav>
+    <div class="nav-container">
+      <a href="index.html"><i class="fas fa-map"></i> Carte</a>
+      <a href="apropos.html" class="active">À propos</a>
+      <a href="projets.html">Projets</a>
+      <a href="interets.html">Centres d'intérêt</a>
+    </div>
+    <button class="menu-toggle" aria-label="Menu">
+      <i class="fas fa-bars"></i>
+    </button>
+  </nav>
+
+  <main>
+    <section>
+      <h2>Profil</h2>
+      <p>
+        Étudiant en BTS Services Informatiques aux Organisations (SIO), je suis motivé par l’envie de
+        développer mes compétences techniques et de contribuer à des projets innovants. Curieux,
+        rigoureux et capable de m’adapter rapidement, j’aime relever de nouveaux défis dans le domaine du numérique.
+      </p>
+    </section>
+
+    <section class="skills-section">
+      <h2><i class="fas fa-code"></i> Compétences</h2>
+      <div class="skills-grid">
+        <div class="skill-category">
+          <h3><i class="fas fa-laptop-code"></i> Langages</h3>
+          <div class="skill-item">
+            <div class="skill-info">
+              <span>Java</span>
+              <span>75%</span>
+            </div>
+            <div class="skill-bar">
+              <div class="skill-progress" style="width: 75%"></div>
+            </div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-info">
+              <span>HTML/CSS</span>
+              <span>80%</span>
+            </div>
+            <div class="skill-bar">
+              <div class="skill-progress" style="width: 80%"></div>
+            </div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-info">
+              <span>Python</span>
+              <span>70%</span>
+            </div>
+            <div class="skill-bar">
+              <div class="skill-progress" style="width: 70%"></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="skill-category">
+          <h3><i class="fas fa-database"></i> Bases de données</h3>
+          <div class="skill-item">
+            <div class="skill-info">
+              <span>SQL / MySQL</span>
+              <span>70%</span>
+            </div>
+            <div class="skill-bar">
+              <div class="skill-progress" style="width: 70%"></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="skill-category">
+          <h3><i class="fas fa-tools"></i> Outils & Frameworks</h3>
+          <div class="skill-item">
+            <div class="skill-info">
+              <span>Angular</span>
+              <span>65%</span>
+            </div>
+            <div class="skill-bar">
+              <div class="skill-progress" style="width: 65%"></div>
+            </div>
+          </div>
+          <div class="skill-tags">
+            <span class="tag"><i class="fab fa-github"></i> GitHub</span>
+            <span class="tag"><i class="fas fa-code"></i> VS Code</span>
+            <span class="tag"><i class="fas fa-code"></i> Eclipse</span>
+          </div>
+        </div>
+
+        <div class="skill-category">
+          <h3><i class="fas fa-users"></i> Soft Skills</h3>
+          <div class="skill-tags">
+            <span class="tag"><i class="fas fa-user-friends"></i> Travail en équipe</span>
+            <span class="tag"><i class="fas fa-tasks"></i> Gestion de projet</span>
+            <span class="tag"><i class="fas fa-puzzle-piece"></i> Résolution de problèmes</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Formation</h2>
+      <p><strong>BTS SIO</strong> – Breteuil (2023 - 2025)</p>
+      <p><strong>Université du Littoral Côte d’Opale</strong> – Calais (2022 - 2023)</p>
+      <p><strong>BTS CPRP</strong> – Rouen (2019 - 2021)</p>
+    </section>
+
+    <section>
+      <h2>Langues</h2>
+      <ul>
+        <li>Anglais : Opérationnel</li>
+        <li>Allemand : Notions</li>
+      </ul>
+    </section>
+
+    <section class="contact-section">
+      <h2><i class="fas fa-envelope"></i> Contact</h2>
+      <div class="contact-grid">
+        <a href="tel:+33614645402" class="contact-card">
+          <i class="fas fa-phone"></i>
+          <span>06 14 64 54 02</span>
+        </a>
+        <a href="mailto:julesrenad27@gmail.com" class="contact-card">
+          <i class="fas fa-envelope"></i>
+          <span>julesrenad27@gmail.com</span>
+        </a>
+        <div class="contact-card">
+          <i class="fas fa-map-marker-alt"></i>
+          <span>Breteuil, France</span>
+        </div>
+      </div>
+      <div class="social-links">
+        <a href="https://github.com/julesrenard" target="_blank" rel="noopener noreferrer" class="social-btn">
+          <i class="fab fa-github"></i> GitHub
+        </a>
+        <a href="https://linkedin.com/in/julesrenard" target="_blank" rel="noopener noreferrer" class="social-btn">
+          <i class="fab fa-linkedin"></i> LinkedIn
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 Jules Renard | Créé avec passion</p>
+    <p class="footer-links">
+      <a href="#" onclick="scrollToTop(); return false;">
+        <i class="fas fa-arrow-up"></i> Haut de page
+      </a>
+    </p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
