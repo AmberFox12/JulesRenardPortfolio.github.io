@@ -120,28 +120,25 @@ body::before {
   position: relative;
   z-index: 5;
   width: 100%;
-  max-width: 1400px;
+  max-width: 1600px;
   margin: 0 auto;
   padding: 2rem;
   perspective: 1000px;
+  min-height: 700px;
 }
 
 .map-world {
   position: relative;
   width: 100%;
-  min-height: 600px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 3rem;
-  padding: 2rem;
+  height: 700px;
+  display: block;
 }
 
 /* ===== Îles ===== */
 .island {
-  position: relative;
-  width: 320px;
-  height: 400px;
+  position: absolute;
+  width: 280px;
+  height: 320px;
   background: linear-gradient(135deg, var(--land-green) 0%, var(--land-light) 100%);
   border-radius: 50% 50% 45% 55% / 60% 60% 40% 40%;
   cursor: pointer;
@@ -182,32 +179,52 @@ body::before {
 }
 
 /* Positions des îles */
+/* À Propos - Haut gauche */
 .island-about {
+  top: 10%;
+  left: 10%;
   animation-delay: 0s;
   border-radius: 45% 55% 50% 50% / 55% 60% 40% 45%;
+  width: 260px;
+  height: 300px;
 }
 
+/* Projets - Milieu bas (centre-bas) */
 .island-projects {
+  bottom: 15%;
+  left: 50%;
+  transform: translateX(-50%);
   animation-delay: 1s;
   border-radius: 50% 50% 48% 52% / 58% 62% 38% 42%;
-  width: 360px;
-  height: 440px;
+  width: 300px;
+  height: 360px;
 }
 
+/* Centres d'intérêt - Haut droite */
 .island-interests {
+  top: 8%;
+  right: 8%;
   animation-delay: 2s;
   border-radius: 55% 45% 50% 50% / 60% 55% 45% 40%;
+  width: 270px;
+  height: 310px;
 }
 
 /* Hover effet */
 .island:hover {
-  transform: translateY(-30px) scale(1.05);
+  transform: translateY(-20px) scale(1.08) !important;
   box-shadow:
     0 20px 60px var(--shadow-deep),
     inset 0 -20px 40px rgba(0, 0, 0, 0.2),
     0 0 0 5px var(--gold-accent),
     0 0 40px rgba(201, 168, 97, 0.6);
   animation-play-state: paused;
+}
+
+/* Correction du hover pour l'île projets (centrée) */
+.island-projects:hover {
+  left: 50%;
+  transform: translateX(-50%) translateY(-20px) scale(1.08) !important;
 }
 
 /* Contenu de l'île */
@@ -219,14 +236,14 @@ body::before {
   align-items: center;
   justify-content: center;
   height: 100%;
-  padding: 2rem;
+  padding: 1.5rem;
   text-align: center;
 }
 
 .island-icon {
-  font-size: 4rem;
+  font-size: 3rem;
   color: var(--gold-accent);
-  margin-bottom: 1rem;
+  margin-bottom: 0.8rem;
   filter: drop-shadow(0 0 10px rgba(201, 168, 97, 0.8));
   transition: all 0.3s ease;
 }
@@ -238,17 +255,17 @@ body::before {
 
 .island-name {
   font-family: "Josefin Slab", serif;
-  font-size: 2rem;
+  font-size: 1.5rem;
   font-weight: 600;
   color: var(--text-light);
   text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.3rem;
   letter-spacing: 0.05em;
 }
 
 .island-desc {
   font-family: "Cormorant Garamond", serif;
-  font-size: 1.2rem;
+  font-size: 1rem;
   color: rgba(232, 244, 240, 0.9);
   text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.6);
 }
