@@ -186,25 +186,25 @@ body::before {
 }
 
 /* Positions des îles */
-/* À Propos - Zone verte gauche (point noir en haut à gauche) */
+/* À Propos - Zone verte gauche */
 .island-about {
-  top: 36%;
-  left: 20%;
+  top: 39%;
+  left: 29%;
   animation-delay: 0s;
 }
 
-/* Projets - Zone désertique bas (point noir au centre du désert) */
+/* Projets - Zone désertique centre-bas */
 .island-projects {
-  bottom: 20%;
-  left: 51%;
+  bottom: 17%;
+  left: 48%;
   transform: translateX(-50%);
   animation-delay: 1s;
 }
 
-/* Centres d'intérêt - Zone montagneuse droite (point noir en haut à droite) */
+/* Centres d'intérêt - Zone montagneuse droite */
 .island-interests {
-  top: 32%;
-  right: 15%;
+  top: 33%;
+  right: 17%;
   animation-delay: 2s;
 }
 
