@@ -198,13 +198,13 @@ body::before {
   bottom: 17%;
   left: 48%;
   transform: translateX(-50%);
-  animation-delay: 1s;
+  animation: none;
 }
 
 /* Centres d'intérêt - Zone montagneuse droite */
 .island-interests {
   top: 33%;
-  right: 17%;
+  right: 19%;
   animation-delay: 2s;
 }
 
