@@ -128,8 +128,8 @@ body::after {
 /* ===== Bouton Retour à la Carte ===== */
 .map-button {
   position: fixed;
-  bottom: 20px;
-  right: 20px;
+  top: 20px;
+  left: 20px;
   z-index: 1000;
   background: var(--accent-color);
   color: white;

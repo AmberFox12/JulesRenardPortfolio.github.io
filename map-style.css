@@ -97,6 +97,8 @@ body::before {
   height: 100vh;
   z-index: 5;
   overflow: hidden;
+  transform: scale(0.9);
+  transform-origin: center center;
 }
 
 .map-world {
@@ -204,7 +206,7 @@ body::before {
 /* Centres d'intérêt - Zone montagneuse droite */
 .island-interests {
   top: 33%;
-  right: 19%;
+  right: 30%;
   animation-delay: 2s;
 }
 
