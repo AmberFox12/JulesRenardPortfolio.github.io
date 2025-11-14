@@ -186,25 +186,25 @@ body::before {
 }
 
 /* Positions des îles */
-/* À Propos - Haut gauche */
+/* À Propos - Sur zone verte/forestière à gauche */
 .island-about {
-  top: 15%;
-  left: 12%;
+  top: 22%;
+  left: 16%;
   animation-delay: 0s;
 }
 
-/* Projets - Centre bas */
+/* Projets - Sur zone désertique/sable au centre-bas */
 .island-projects {
-  bottom: 20%;
-  left: 50%;
+  bottom: 35%;
+  left: 54%;
   transform: translateX(-50%);
   animation-delay: 1s;
 }
 
-/* Centres d'intérêt - Haut droite */
+/* Centres d'intérêt - Sur zone montagneuse/île à droite */
 .island-interests {
-  top: 15%;
-  right: 12%;
+  top: 18%;
+  right: 18%;
   animation-delay: 2s;
 }
 
