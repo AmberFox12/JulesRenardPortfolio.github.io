@@ -97,7 +97,6 @@ body::before {
   height: 100vh;
   z-index: 5;
   overflow: hidden;
-  transform: scale(0.9);
   transform-origin: center center;
 }
 

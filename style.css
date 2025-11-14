@@ -56,12 +56,82 @@ body {
   overflow-x: hidden;
 }
 
+/* ===== Fonds d'écran spécifiques par page ===== */
+body.page-apropos {
+  background-image: url('images/iona-fleur-spirituelle.jpg.webp');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+}
+
+body.page-apropos::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(245, 248, 245, 0.85);
+  z-index: -1;
+}
+
+body.page-apropos.dark-mode::before {
+  background: rgba(26, 37, 37, 0.85);
+}
+
+body.page-projets {
+  background-image: url('images/mont_targon.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+}
+
+body.page-projets::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(245, 248, 245, 0.85);
+  z-index: -1;
+}
+
+body.page-projets.dark-mode::before {
+  background: rgba(26, 37, 37, 0.85);
+}
+
+body.page-interets {
+  background-image: url('images/Shurima_capital.webp');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+}
+
+body.page-interets::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(245, 248, 245, 0.85);
+  z-index: -1;
+}
+
+body.page-interets.dark-mode::before {
+  background: rgba(26, 37, 37, 0.85);
+}
+
 html {
   scroll-behavior: smooth;
 }
 
-/* Particules flottantes - Pétales et Pollens */
-body::before {
+/* Particules flottantes - Pétales et Pollens (désactivées sur pages avec fond) */
+body:not(.page-apropos):not(.page-projets):not(.page-interets)::before {
   content: '🌸';
   position: fixed;
   top: -50px;
@@ -73,7 +143,7 @@ body::before {
   z-index: 1;
 }
 
-body::after {
+body:not(.page-apropos):not(.page-projets):not(.page-interets)::after {
   content: '🌼';
   position: fixed;
   top: -50px;
