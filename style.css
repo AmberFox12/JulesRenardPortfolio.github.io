@@ -763,6 +763,78 @@ footer p {
   transform: translateY(0);
 }
 
+/* ===== Galerie de photos ===== */
+.photo-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.photo-item {
+  background: var(--card-bg);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  transition: var(--transition);
+}
+
+.photo-item:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-hover);
+}
+
+.photo-item img {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+.photo-item:hover img {
+  transform: scale(1.05);
+}
+
+.photo-caption {
+  padding: 1.5rem;
+}
+
+.photo-caption h3 {
+  font-family: "Josefin Slab", serif;
+  color: var(--primary-color);
+  margin-bottom: 0.5rem;
+  font-size: 1.3rem;
+}
+
+.photo-caption p {
+  color: var(--text-color);
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.back-to-projects {
+  margin-top: 3rem;
+  text-align: center;
+}
+
+.btn-back {
+  display: inline-block;
+  padding: 1rem 2rem;
+  background: var(--accent-color);
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: 500;
+  transition: var(--transition);
+  box-shadow: var(--shadow);
+}
+
+.btn-back:hover {
+  background: var(--primary-color);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-hover);
+}
+
 /* ===== Responsive Design ===== */
 @media (max-width: 768px) {
   header h1 {
@@ -798,6 +870,10 @@ footer p {
   .skills-grid,
   .projects-grid,
   .interests-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .photo-gallery {
     grid-template-columns: 1fr;
   }
 
