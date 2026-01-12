@@ -254,6 +254,93 @@ section h2 {
   color: var(--accent-color);
 }
 
+/* ===== Timeline Formation ===== */
+.timeline {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin: 2rem 0;
+  padding: 2rem 0;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  top: 70px;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg,
+    var(--accent-color) 0%,
+    var(--primary-color) 50%,
+    var(--accent-color) 100%);
+  z-index: 0;
+}
+
+.timeline-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1;
+  min-width: 150px;
+  position: relative;
+  z-index: 1;
+}
+
+.timeline-circle {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1rem;
+  box-shadow: 0 4px 15px rgba(127, 179, 160, 0.4);
+  transition: var(--transition);
+  position: relative;
+  z-index: 2;
+}
+
+.timeline-circle i {
+  font-size: 2rem;
+  color: white;
+}
+
+.timeline-item:hover .timeline-circle {
+  transform: scale(1.15) translateY(-5px);
+  box-shadow: 0 6px 25px rgba(127, 179, 160, 0.6);
+  background: linear-gradient(135deg, var(--accent-color), var(--primary-color));
+}
+
+.timeline-content {
+  text-align: center;
+  padding-top: 0.5rem;
+}
+
+.timeline-content h3 {
+  color: var(--accent-color);
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.timeline-content h4 {
+  color: var(--text-color);
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 0.3rem;
+}
+
+.timeline-content p {
+  color: var(--text-color);
+  font-size: 0.9rem;
+  opacity: 0.8;
+}
+
 /* ===== Skills Section ===== */
 .skills-grid {
   display: grid;
@@ -842,6 +929,41 @@ footer p {
 
   section {
     padding: 1.5rem;
+  }
+
+  .timeline {
+    flex-direction: column;
+    gap: 3rem;
+  }
+
+  .timeline::before {
+    left: 39px;
+    right: auto;
+    width: 4px;
+    height: 100%;
+    top: 0;
+    background: linear-gradient(180deg,
+      var(--accent-color) 0%,
+      var(--primary-color) 50%,
+      var(--accent-color) 100%);
+  }
+
+  .timeline-item {
+    flex-direction: row;
+    justify-content: flex-start;
+    text-align: left;
+    min-width: 100%;
+  }
+
+  .timeline-circle {
+    flex-shrink: 0;
+    margin-right: 1.5rem;
+    margin-bottom: 0;
+  }
+
+  .timeline-content {
+    text-align: left;
+    padding-top: 0;
   }
 }
 
