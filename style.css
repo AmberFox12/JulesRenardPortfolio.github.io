@@ -550,6 +550,10 @@ section h2 {
   border-color: var(--accent-color);
 }
 
+.interest-card.full-width {
+  grid-column: 1 / -1;
+}
+
 .interest-icon {
   font-size: 3.5rem;
   margin-bottom: 1rem;
