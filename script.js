@@ -25,14 +25,14 @@ themeToggle.addEventListener('click', () => {
 
 // ===== Menu Toggle Mobile =====
 const menuToggle = document.querySelector('.menu-toggle');
-const navContainer = document.querySelector('.nav-container');
+const navLinksContainer = document.querySelector('.nav-links');
 
-if (menuToggle) {
+if (menuToggle && navLinksContainer) {
   menuToggle.addEventListener('click', () => {
-    navContainer.classList.toggle('active');
+    navLinksContainer.classList.toggle('active');
     const icon = menuToggle.querySelector('i');
 
-    if (navContainer.classList.contains('active')) {
+    if (navLinksContainer.classList.contains('active')) {
       icon.classList.replace('fa-bars', 'fa-times');
     } else {
       icon.classList.replace('fa-times', 'fa-bars');
@@ -40,11 +40,11 @@ if (menuToggle) {
   });
 
   // Fermer le menu en cliquant sur un lien
-  const navLinks = navContainer.querySelectorAll('a');
-  navLinks.forEach(link => {
+  const navLinksItems = navLinksContainer.querySelectorAll('a');
+  navLinksItems.forEach(link => {
     link.addEventListener('click', () => {
       if (window.innerWidth <= 768) {
-        navContainer.classList.remove('active');
+        navLinksContainer.classList.remove('active');
         menuToggle.querySelector('i').classList.replace('fa-times', 'fa-bars');
       }
     });

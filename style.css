@@ -60,48 +60,6 @@ html {
   scroll-behavior: smooth;
 }
 
-/* Particules flottantes - Pétales et Pollens */
-body::before {
-  content: '🌸';
-  position: fixed;
-  top: -50px;
-  left: 10%;
-  font-size: 2rem;
-  opacity: 0.4;
-  animation: float-petal 15s infinite ease-in-out;
-  pointer-events: none;
-  z-index: 1;
-}
-
-body::after {
-  content: '🌼';
-  position: fixed;
-  top: -50px;
-  right: 20%;
-  font-size: 1.5rem;
-  opacity: 0.3;
-  animation: float-petal 18s infinite ease-in-out 3s;
-  pointer-events: none;
-  z-index: 1;
-}
-
-@keyframes float-petal {
-  0% {
-    transform: translateY(-50px) translateX(0) rotate(0deg);
-    opacity: 0;
-  }
-  10% {
-    opacity: 0.4;
-  }
-  90% {
-    opacity: 0.4;
-  }
-  100% {
-    transform: translateY(100vh) translateX(100px) rotate(360deg);
-    opacity: 0;
-  }
-}
-
 /* ===== Bouton Theme Toggle ===== */
 .theme-toggle {
   position: fixed;
@@ -125,6 +83,16 @@ body::after {
   box-shadow: var(--shadow-hover);
 }
 
+/* ===== Navigation ===== */
+nav {
+  background-color: var(--secondary-color);
+  padding: 1rem;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: var(--shadow);
+}
+
 /* ===== Header ===== */
 header {
   background: linear-gradient(135deg, var(--vert-tendre) 0%, var(--prairie-fraiche) 50%, var(--bleu-ciel) 100%);
@@ -146,17 +114,6 @@ header::before {
   background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="rgba(255,255,255,0.3)" d="M0,96L48,112C96,128,192,160,288,160C384,160,480,128,576,122.7C672,117,768,139,864,154.7C960,171,1056,181,1152,165.3C1248,149,1344,107,1392,85.3L1440,64L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>') no-repeat bottom;
   background-size: cover;
   opacity: 0.3;
-}
-
-/* Motif floral en arrière-plan du header */
-header::after {
-  content: '🌿';
-  position: absolute;
-  bottom: 10%;
-  right: 5%;
-  font-size: 4rem;
-  opacity: 0.15;
-  transform: rotate(-15deg);
 }
 
 .header-content {
@@ -226,7 +183,30 @@ nav {
 .nav-container {
   display: flex;
   justify-content: center;
+  align-items: center;
   gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.nav-logo {
+  color: white;
+  font-family: "Josefin Slab", serif;
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin-right: auto;
+  text-decoration: none;
+  transition: var(--transition);
+}
+
+.nav-logo:hover {
+  color: var(--or-crepuscule);
+}
+
+.nav-links {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
 }
 
 nav a {
@@ -271,7 +251,7 @@ nav a.active {
 
 /* ===== Main Content ===== */
 main {
-  max-width: 1000px;
+  max-width: 1200px;
   margin: 2rem auto;
   padding: 0 1rem;
 }
@@ -846,12 +826,30 @@ footer p {
   }
 
   .nav-container {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .nav-logo {
+    display: block;
+    font-size: 1.1rem;
+  }
+
+  .nav-links {
     flex-direction: column;
     gap: 0.5rem;
     display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background-color: var(--secondary-color);
+    padding: 1rem;
+    box-shadow: var(--shadow);
   }
 
-  .nav-container.active {
+  .nav-links.active {
     display: flex;
   }
 
