@@ -121,3 +121,102 @@ window.addEventListener('load', () => {
     document.body.style.opacity = '1';
   }, 100);
 });
+
+// ===== Modal Photos =====
+const projectPhotos = {
+  'jeu-probleme': {
+    title: 'Jeu Problème - Photos',
+    photos: [
+      {
+        src: 'images/Acceuil.png',
+        title: 'Page d\'accueil',
+        icon: 'fa-home',
+        description: 'Interface d\'accueil avec les options principales du jeu'
+      },
+      {
+        src: 'images/Classement.png',
+        title: 'Classement',
+        icon: 'fa-trophy',
+        description: 'Tableau des meilleurs scores et classement des joueurs'
+      },
+      {
+        src: 'images/Historique.png',
+        title: 'Historique',
+        icon: 'fa-history',
+        description: 'Historique des parties jouées et statistiques'
+      },
+      {
+        src: 'images/Jeux.png',
+        title: 'Interface de jeu',
+        icon: 'fa-gamepad',
+        description: 'Zone de jeu avec les problèmes de programmation et éditeur de code'
+      }
+    ]
+  },
+  'rftg': {
+    title: 'Application RFTG - Schémas',
+    photos: [
+      {
+        src: 'images/SchémaArchitecture.png',
+        title: 'Schéma d\'Architecture',
+        icon: 'fa-sitemap',
+        description: 'Architecture client-serveur avec API REST Spring Boot, frontend Laravel/Android et base MySQL'
+      },
+      {
+        src: 'images/MCD_RFTG.png',
+        title: 'Modèle Conceptuel de Données',
+        icon: 'fa-database',
+        description: 'MCD de l\'application avec les tables clients, dvd, livraisons et locations'
+      }
+    ]
+  }
+};
+
+function openPhotoModal(projectId) {
+  const modal = document.getElementById('photoModal');
+  const modalTitle = document.getElementById('modalTitle');
+  const modalGallery = document.getElementById('modalGallery');
+
+  const project = projectPhotos[projectId];
+  if (!project) return;
+
+  modalTitle.textContent = project.title;
+  modalGallery.innerHTML = '';
+
+  project.photos.forEach(photo => {
+    const photoItem = document.createElement('div');
+    photoItem.className = 'modal-photo-item';
+    photoItem.innerHTML = `
+      <img src="${photo.src}" alt="${photo.title}" onclick="window.open(this.src, '_blank')">
+      <div class="modal-photo-caption">
+        <h3><i class="fas ${photo.icon}"></i> ${photo.title}</h3>
+        <p>${photo.description}</p>
+      </div>
+    `;
+    modalGallery.appendChild(photoItem);
+  });
+
+  modal.classList.add('show');
+  document.body.style.overflow = 'hidden';
+}
+
+function closePhotoModal() {
+  const modal = document.getElementById('photoModal');
+  modal.classList.remove('show');
+  document.body.style.overflow = 'auto';
+}
+
+// Fermer la modale en cliquant en dehors
+window.addEventListener('click', (e) => {
+  const modal = document.getElementById('photoModal');
+  if (e.target === modal) {
+    closePhotoModal();
+  }
+});
+
+// Fermer la modale avec la touche Échap
+window.addEventListener('keydown', (e) => {
+  if (e.key === 'Escape') {
+    closePhotoModal();
+  }
+});

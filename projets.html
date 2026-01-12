@@ -81,7 +81,7 @@
             <p><i class="fas fa-graduation-cap"></i> <strong>Contexte :</strong> Projet de formation BTS SIO</p>
           </div>
           <div class="project-links">
-            <a href="photos.html" class="project-link"><i class="fas fa-external-link-alt"></i> Photos</a>
+            <button class="project-link" onclick="openPhotoModal('jeu-probleme')"><i class="fas fa-images"></i> Voir les photos</button>
           </div>
         </div>
 
@@ -119,12 +119,25 @@
           <div class="project-details">
             <p><i class="fas fa-tools"></i> <strong>Technologies :</strong> Java, HTML, CSS</p>
             <p><i class="fas fa-book"></i> <strong>Objectif :</strong> Apprentissage et pratique</p>
-            <a href="photos.html" class="project-link"><i class="fas fa-external-link-alt"></i> Photos</a>
+          </div>
+          <div class="project-links">
+            <button class="project-link" onclick="openPhotoModal('rftg')"><i class="fas fa-images"></i> Voir les schémas</button>
           </div>
         </div>
       </div>
     </section>
   </main>
+
+  <!-- Modal pour afficher les photos -->
+  <div id="photoModal" class="modal">
+    <div class="modal-content">
+      <span class="modal-close" onclick="closePhotoModal()">&times;</span>
+      <h2 id="modalTitle">Photos du projet</h2>
+      <div class="modal-gallery" id="modalGallery">
+        <!-- Les photos seront insérées ici par JavaScript -->
+      </div>
+    </div>
+  </div>
 
   <footer>
     <p>© 2025 Jules Renard | Créé avec passion</p>

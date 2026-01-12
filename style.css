@@ -421,6 +421,108 @@ section h2 {
   color: var(--text-color);
 }
 
+/* ===== Modal Photo ===== */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.9);
+  overflow: auto;
+}
+
+.modal.show {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-content {
+  background: var(--card-bg);
+  margin: 2rem auto;
+  padding: 2rem;
+  border-radius: 12px;
+  max-width: 1200px;
+  width: 90%;
+  max-height: 90vh;
+  overflow-y: auto;
+  position: relative;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.6);
+}
+
+.modal-close {
+  position: absolute;
+  top: 1rem;
+  right: 1.5rem;
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: var(--accent-color);
+  cursor: pointer;
+  transition: var(--transition);
+  z-index: 1001;
+}
+
+.modal-close:hover {
+  color: white;
+  transform: scale(1.2) rotate(90deg);
+}
+
+.modal-content h2 {
+  color: var(--accent-color);
+  margin-bottom: 2rem;
+  font-size: 1.8rem;
+  padding-right: 3rem;
+}
+
+.modal-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.modal-photo-item {
+  background: var(--bg-color);
+  border-radius: 8px;
+  overflow: hidden;
+  transition: var(--transition);
+  border: 2px solid transparent;
+}
+
+.modal-photo-item:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-hover);
+  border-color: var(--accent-color);
+}
+
+.modal-photo-item img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  cursor: pointer;
+}
+
+.modal-photo-caption {
+  padding: 1rem;
+}
+
+.modal-photo-caption h3 {
+  color: var(--accent-color);
+  margin-bottom: 0.5rem;
+  font-size: 1.1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.modal-photo-caption p {
+  color: var(--text-color);
+  font-size: 0.9rem;
+  opacity: 0.9;
+}
+
 /* ===== Contact Section ===== */
 .contact-grid {
   display: grid;
@@ -605,6 +707,9 @@ section h2 {
   font-size: 0.9rem;
   transition: var(--transition);
   display: inline-flex;
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
   align-items: center;
   gap: 0.5rem;
 }
@@ -964,6 +1069,23 @@ footer p {
   .timeline-content {
     text-align: left;
     padding-top: 0;
+  }
+
+  .modal-content {
+    width: 95%;
+    padding: 1.5rem;
+    margin: 1rem auto;
+  }
+
+  .modal-gallery {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .modal-close {
+    font-size: 2rem;
+    top: 0.5rem;
+    right: 1rem;
   }
 }
 
