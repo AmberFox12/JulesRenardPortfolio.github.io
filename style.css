@@ -6,7 +6,7 @@
   --accent-color: #7FB3A0;
   --text-color: #D8E6E3;
   --bg-color: #1A2525;
-  --card-bg: #243333;
+  --card-bg: #2D4040;
   --shadow: 0 2px 10px rgba(0,0,0,0.4);
   --shadow-hover: 0 5px 20px rgba(0,0,0,0.5);
   --transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
@@ -261,7 +261,7 @@ section h2 {
   gap: 2rem;
 }
 
-.profil-section p {
+.profil-text {
   flex: 1;
   line-height: 1.8;
 }
@@ -280,6 +280,7 @@ section h2 {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  display: block;
 }
 
 /* ===== Timeline Formation ===== */
