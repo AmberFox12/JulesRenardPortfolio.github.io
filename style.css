@@ -499,6 +499,64 @@ section h2 {
   opacity: 0.9;
 }
 
+/* ===== Compétences ===== */
+.competences-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1rem;
+}
+
+.competence-card {
+  background: var(--bg-color);
+  padding: 2rem;
+  border-radius: 12px;
+  text-align: center;
+  transition: var(--transition);
+  border: 2px solid transparent;
+}
+
+.competence-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-hover);
+  border-color: var(--accent-color);
+}
+
+.competence-icon {
+  width: 70px;
+  height: 70px;
+  margin: 0 auto 1rem;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: var(--transition);
+}
+
+.competence-icon i {
+  font-size: 1.8rem;
+  color: white;
+}
+
+.competence-card:hover .competence-icon {
+  transform: scale(1.1);
+  box-shadow: 0 4px 15px rgba(127, 179, 160, 0.4);
+}
+
+.competence-card h3 {
+  color: var(--accent-color);
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+
+.competence-card p {
+  color: var(--text-color);
+  font-size: 0.9rem;
+  line-height: 1.6;
+  opacity: 0.9;
+}
+
 /* ===== Modal Photo ===== */
 .modal {
   display: none;
