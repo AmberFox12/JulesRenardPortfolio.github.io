@@ -228,15 +228,10 @@ section:hover {
 section h2 {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", sans-serif;
   color: var(--primary-color);
-  margin-bottom: 1.5rem;
   display: flex;
   align-items: center;
-  gap: 0.7rem;
   font-size: 2rem;
   font-weight: 700;
-  letter-spacing: -0.01em;
-  position: relative;
-  padding-bottom: 0.5rem;
 }
 
 section h2::after {
@@ -282,8 +277,8 @@ section h2 {
 }
 
 .profil-photo img {
-  width: 100%;
-  height: 100%;
+  width: 105%;
+  height: 115%;
   object-fit: cover;
   object-position: center;
   display: block;
