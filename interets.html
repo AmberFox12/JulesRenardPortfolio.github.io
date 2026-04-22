@@ -3,134 +3,333 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Découvrez mes passions : impression 3D, jeux vidéo, technologies et plus encore">
-  <title>Centres d'intérêt - Jules Renard</title>
+  <meta name="description" content="Veille informatique — la souveraineté numérique — et centres d'intérêt de Jules Renard">
+  <title>Centres d'intérêt — Jules Renard</title>
 
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
-<body class="page-interets">
-  <nav>
-    <div class="nav-container">
-      <a href="index.html" class="nav-logo">Jules Renard</a>
-      <div class="nav-links">
-        <a href="index.html">À propos</a>
-        <a href="competences.html">Compétences</a>
-        <a href="projets.html">Projets</a>
-        <a href="interets.html" class="active">Centres d'intérêt</a>
+<body>
+
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo">
+      <span class="nav-logo-mark">JR</span>
+      <span>Jules Renard</span>
+    </a>
+    <div class="nav-links">
+      <a href="index.html" class="nav-link">À propos</a>
+      <a href="competences.html" class="nav-link">Compétences</a>
+      <a href="projets.html" class="nav-link">Projets</a>
+      <a href="interets.html" class="nav-link">Centres d'intérêt</a>
+      <a href="mailto:julesrenad27@gmail.com" class="nav-cta">Me contacter</a>
+    </div>
+    <button class="menu-toggle" aria-label="Menu">☰</button>
+  </div>
+</nav>
+
+<main>
+
+  <!-- ============================================= -->
+  <!-- VEILLE INFORMATIQUE — SOUVERAINETÉ NUMÉRIQUE  -->
+  <!-- ============================================= -->
+  <section class="reveal" style="padding-top: 2.5rem;">
+
+    <!-- Hero veille -->
+    <div class="veille-hero">
+      <div class="veille-hero-label">Veille informatique · 2022 — 2026</div>
+      <h3>La souveraineté <span class="italic">numérique</span>, champ de bataille silencieux.</h3>
+      <p class="veille-hero-lede">
+        <em>72 % du budget cloud français part chez des acteurs américains.</em> Ma veille documente, année après année, les signaux d'une lente prise de conscience européenne — et ses angles morts.
+      </p>
+    </div>
+
+    <!-- Stats -->
+    <div class="veille-stats reveal-stagger">
+      <div class="veille-stat">
+        <div class="veille-stat-value">72<span class="unit">%</span></div>
+        <div class="veille-stat-label">du cloud français hébergé par des acteurs US</div>
+      </div>
+      <div class="veille-stat">
+        <div class="veille-stat-value">98<span class="unit">%</span></div>
+        <div class="veille-stat-label">du trafic internet transite par des câbles sous-marins</div>
+      </div>
+      <div class="veille-stat">
+        <div class="veille-stat-value">21</div>
+        <div class="veille-stat-label">câbles sous-marins détenus par Google</div>
+      </div>
+      <div class="veille-stat">
+        <div class="veille-stat-value">14<span class="unit">%</span></div>
+        <div class="veille-stat-label">part de marché cloud des acteurs européens</div>
       </div>
     </div>
-    <button class="menu-toggle" aria-label="Menu">
-      <i class="fas fa-bars"></i>
-    </button>
-  </nav>
 
-  <main>
-    <section>
-      <h2><i class="fas fa-star"></i> Mes Passions</h2>
-
-      <div class="interests-grid">
-        <!-- Intérêt 1 -->
-        <div class="interest-card full-width">
-          <div class="interest-icon">
-            <i class="fab fa-angular"></i>
-          </div>
-          <h3>Veille Technologique</h3>
-          <h4>Angular & JavaScript</h4>
-          <ul>
-            <li><strong>Période observée :</strong> 2024–2026</li>
-            <li><strong>Évolutions d'Angular</strong>
-              <ul>
-                <li>Adoption des <strong>Signals</strong> pour simplifier la réactivité</li>
-                <li>Amélioration globale des <strong>performances</strong></li>
-                <li>Modernisation du framework et meilleure accessibilité</li>
-              </ul>
-            </li>
-            <li><strong>Outils de développement Angular</strong>
-              <ul>
-                <li><strong>Hot Module Replacement (HMR)</strong> pour un développement plus rapide</li>
-                <li><strong>Vitest</strong> intégré pour les tests</li>
-                <li><strong>Migrations automatiques</strong> facilitant les mises à jour</li>
-              </ul>
-            </li>
-            <li><strong>Optimisations des performances</strong>
-              <ul>
-                <li><strong>Server-Side Rendering (SSR)</strong> optimisé</li>
-                <li><strong>Hydration</strong> améliorée</li>
-                <li>Possibilité d'un fonctionnement <strong>zoneless</strong></li>
-              </ul>
-            </li>
-            <li><strong>Écosystème JavaScript</strong>
-              <ul>
-                <li><strong>TypeScript</strong> pour un code plus fiable et typé</li>
-                <li><strong>ESLint</strong> pour la qualité et la cohérence du code</li>
-                <li>Évolutions <strong>ECMAScript</strong> pour un JavaScript moderne</li>
-              </ul>
-            </li>
-          </ul>
-        </div>
-
-        <!-- Intérêt 2 -->
-        <div class="interest-card">
-          <div class="interest-icon">
-            <i class="fas fa-book-reader"></i>
-          </div>
-          <h3>Lecture</h3>
-          <p>
-            Grand amateur de lecture, particulièrement :
-          </p>
-          <ul>
-            <li><i class="fas fa-dragon"></i> Mangas japonais</li>
-            <li><i class="fas fa-mask"></i> Bandes dessinées</li>
-            <li><i class="fas fa-language"></i> Lectures en anglais</li>
-          </ul>
-        </div>
-
-        <!-- Intérêt 3 -->
-        <div class="interest-card">
-          <div class="interest-icon">
-            <i class="fas fa-gamepad"></i>
-          </div>
-          <h3>Jeux Vidéo</h3>
-          <p>
-            Passionné de jeux vidéo, j'aime :
-          </p>
-          <ul>
-            <li><i class="fas fa-globe"></i> Explorer différents univers virtuels</li>
-            <li><i class="fas fa-cogs"></i> Comprendre les mécaniques de gameplay</li>
-            <li><i class="fas fa-code"></i> Analyser la conception de jeux</li>
-          </ul>
-        </div>
-
-        <!-- Intérêt 4 -->
-        <div class="interest-card">
-          <div class="interest-icon">
-            <i class="fas fa-cube"></i>
-          </div>
-          <h3>Impression 3D</h3>
-          <p>
-            Je possède une <strong>imprimante 3D</strong> personnelle que j'utilise pour :
-          </p>
-          <ul>
-            <li><i class="fas fa-wrench"></i> Fabriquer des pièces sur mesure</li>
-            <li><i class="fas fa-lightbulb"></i> Créer des prototypes</li>
-            <li><i class="fas fa-palette"></i> Réaliser des objets décoratifs</li>
-            <li><a href="interets.html" class="active">Image imprimante + réalisation ce serait cool</a></li>
-          </ul>
-        </div>
+    <!-- Les 3 piliers -->
+    <div class="veille-pillars reveal-stagger">
+      <div class="pillar">
+        <div class="pillar-num">I.</div>
+        <div class="pillar-title">Données</div>
+        <p class="pillar-desc">Qui héberge nos informations ? Les données médicales, fiscales ou militaires stockées chez un acteur étranger peuvent lui être accessibles.</p>
       </div>
-    </section>
-  </main>
+      <div class="pillar">
+        <div class="pillar-num">II.</div>
+        <div class="pillar-title">Infrastructures</div>
+        <p class="pillar-desc">Câbles sous-marins, data centers, satellites : les tuyaux physiques du numérique sont-ils entre les mains d'acteurs alignés ?</p>
+      </div>
+      <div class="pillar">
+        <div class="pillar-num">III.</div>
+        <div class="pillar-title">Logiciels</div>
+        <p class="pillar-desc">OS, outils collaboratifs, modèles d'IA : on dépend quotidiennement de logiciels dont on n'a pas le contrôle.</p>
+      </div>
+    </div>
 
-  <footer>
-    <p>© 2025 Jules Renard | Créé avec passion</p>
-    <p class="footer-links">
-      <a href="#" onclick="scrollToTop(); return false;">
-        <i class="fas fa-arrow-up"></i> Haut de page
-      </a>
-    </p>
-  </footer>
+    <!-- Timeline Nav -->
+    <div class="veille-timeline-nav">
+      <button class="tl-nav-btn active" data-filter="all">Tout</button>
+      <button class="tl-nav-btn" data-filter="alert">Alertes</button>
+      <button class="tl-nav-btn" data-filter="law">Lois</button>
+      <button class="tl-nav-btn" data-filter="win">Avancées</button>
+      <button class="tl-nav-btn" data-filter="context">Contexte</button>
+    </div>
 
-  <script src="script.js"></script>
+    <!-- Timeline -->
+    <div class="veille-timeline">
+      <div class="tl-spine"><div class="tl-spine-fill"></div></div>
+
+      <article class="tl-item" data-kind="law">
+        <div class="tl-year"><span class="big">2018</span>USA · Mars</div>
+        <div class="tl-node"></div>
+        <div class="tl-content">
+          <span class="tl-kind" data-kind="law">● Loi</span>
+          <h4 class="tl-title">Le Cloud Act ouvre la porte arrière</h4>
+          <p class="tl-body">
+            Le Congrès américain adopte le <strong>Clarifying Lawful Overseas Use of Data Act</strong>. Conséquence : Washington peut exiger l'accès à <em>n'importe quelle donnée</em> hébergée par une entreprise américaine, y compris sur un serveur à Paris. Le RGPD européen, entré en vigueur la même année, n'y fait pas barrage.
+          </p>
+          <div class="tl-footnote">Source · <a href="https://www.congress.gov/bill/115th-congress/house-bill/4943" target="_blank" rel="noopener">Cloud Act · 115th Congress</a></div>
+        </div>
+      </article>
+
+      <article class="tl-item" data-kind="context">
+        <div class="tl-year"><span class="big">2020</span>France</div>
+        <div class="tl-node"></div>
+        <div class="tl-content">
+          <span class="tl-kind" data-kind="context">● Contexte</span>
+          <h4 class="tl-title">Health Data Hub : le scandale qui ouvre les yeux</h4>
+          <p class="tl-body">
+            Le gouvernement français confie à <strong>Microsoft Azure</strong> l'hébergement du Health Data Hub — la plateforme qui centralise les données de santé de tous les Français. Le Conseil d'État reconnaît un <em>risque réel</em> de transmission aux autorités américaines. Fin du débat : la souveraineté devient un sujet politique.
+          </p>
+          <div class="tl-footnote">Source · <a href="https://www.conseil-etat.fr/fr/arianeweb/CE/decision/2020-10-13/444937" target="_blank" rel="noopener">Conseil d'État, ordonnance 13 oct. 2020</a></div>
+        </div>
+      </article>
+
+      <article class="tl-item" data-kind="law">
+        <div class="tl-year"><span class="big">2021</span>ANSSI</div>
+        <div class="tl-node"></div>
+        <div class="tl-content">
+          <span class="tl-kind" data-kind="law">● Label</span>
+          <h4 class="tl-title">SecNumCloud 3.2 : le sceau français</h4>
+          <p class="tl-body">
+            L'ANSSI publie la version 3.2 du <strong>référentiel SecNumCloud</strong>. Pour obtenir le label, un prestataire doit garantir que ses capitaux, ses infrastructures et son droit applicable sont européens. <em>Seul</em> ce label devient valable pour les données sensibles de l'État.
+          </p>
+          <div class="tl-footnote">Source · <a href="https://cyber.gouv.fr/secnumcloud-pour-les-fournisseurs-de-services-cloud" target="_blank" rel="noopener">ANSSI · Référentiel SecNumCloud 3.2</a></div>
+        </div>
+      </article>
+
+      <article class="tl-item" data-kind="alert">
+        <div class="tl-year"><span class="big">2022</span>Europe</div>
+        <div class="tl-node"></div>
+        <div class="tl-content">
+          <span class="tl-kind" data-kind="alert">● Alerte</span>
+          <h4 class="tl-title">Sovereignty washing : la fausse souveraineté</h4>
+          <p class="tl-body">
+            Des offres labellisées « souveraines » fleurissent : <strong>Bleu</strong> (Orange + Capgemini + Microsoft), <strong>S3NS</strong> (Thales + Google). Sous le badge français, la technologie reste américaine. Les juristes alertent : un partenariat capitalistique ne change rien au droit applicable au code source.
+          </p>
+          <div class="tl-footnote">Source · <a href="https://www.laquadrature.net/2022/10/11/cloud-de-confiance-ou-leurre-souverain/" target="_blank" rel="noopener">La Quadrature du Net · 2022</a></div>
+        </div>
+      </article>
+
+      <article class="tl-item" data-kind="win">
+        <div class="tl-year"><span class="big">2023</span>Paris</div>
+        <div class="tl-node"></div>
+        <div class="tl-content">
+          <span class="tl-kind" data-kind="win">● Avancée</span>
+          <h4 class="tl-title">Mistral AI : un champion européen</h4>
+          <p class="tl-body">
+            Fondée par d'anciens de Meta et DeepMind, <strong>Mistral AI</strong> lève 105 M€ en amorçage puis publie en licence libre des modèles rivalisant avec ceux d'OpenAI. Valorisation en 2025 : <em>11,7 milliards d'euros</em>. La preuve qu'un acteur européen peut exister dans l'IA — à condition d'être massivement financé.
+          </p>
+          <div class="tl-footnote">Source · <a href="https://www.lesechos.fr/tech-medias/intelligence-artificielle/mistral-ai-valorisee-a-pres-de-12-milliards-de-dollars-lors-dune-nouvelle-levee-de-fonds" target="_blank" rel="noopener">Les Echos · mai 2025</a></div>
+        </div>
+      </article>
+
+      <article class="tl-item" data-kind="alert">
+        <div class="tl-year"><span class="big">2025</span>Cigref</div>
+        <div class="tl-node"></div>
+        <div class="tl-content">
+          <span class="tl-kind" data-kind="alert">● Alerte</span>
+          <h4 class="tl-title">83 % du cloud européen part aux USA</h4>
+          <p class="tl-body">
+            Le rapport Cigref publie des chiffres qui glacent : <strong>83 %</strong> des dépenses cloud des grandes entreprises européennes vont vers AWS, Azure ou Google Cloud. Les prestataires européens ne captent que <strong>14 %</strong>. Paradoxe : VLC et FFmpeg sont français, mais <em>nos meilleurs profils partent en Silicon Valley</em>.
+          </p>
+          <div class="tl-footnote">Source · <a href="https://www.cigref.fr/place-de-marche-du-cloud-en-europe-le-cigref-publie-une-analyse-inedite" target="_blank" rel="noopener">Rapport Cigref 2025 · dépenses cloud</a></div>
+        </div>
+      </article>
+
+      <article class="tl-item" data-kind="win">
+        <div class="tl-year"><span class="big">2025</span>Allemagne</div>
+        <div class="tl-node"></div>
+        <div class="tl-content">
+          <span class="tl-kind" data-kind="win">● Avancée</span>
+          <h4 class="tl-title">Schleswig-Holstein : 30 000 agents sortent de Microsoft</h4>
+          <p class="tl-body">
+            Le Land allemand achève la migration de <strong>30 000 postes administratifs</strong> vers des logiciels <em>100 % libres</em> : LibreOffice remplace Office, Thunderbird remplace Outlook, Nextcloud remplace SharePoint. Première administration publique d'envergure à sortir totalement de l'écosystème Microsoft en Europe.
+          </p>
+          <div class="tl-footnote">Source · <a href="https://www.schleswig-holstein.de/DE/landesregierung/themen/digitalisierung/digitaleSouveraenitaet/digitaleSouveraenitaet.html" target="_blank" rel="noopener">Land Schleswig-Holstein · 2025</a></div>
+        </div>
+      </article>
+
+      <article class="tl-item" data-kind="context">
+        <div class="tl-year"><span class="big">2026</span>Aujourd'hui</div>
+        <div class="tl-node"></div>
+        <div class="tl-content">
+          <span class="tl-kind" data-kind="context">● Où en est-on</span>
+          <h4 class="tl-title">Une prise de conscience encore lente</h4>
+          <p class="tl-body">
+            Règlement européen sur l'IA adopté, DMA et DSA en application, SecNumCloud exigé pour les données sensibles. Mais OVHcloud, Clever Cloud et Scaleway restent des nains face aux hyperscalers. <em>La muraille protège, elle n'émancipe pas.</em> Combler vingt ans de retard industriel demandera du temps, de l'argent et une stratégie européenne concertée.
+          </p>
+          <div class="tl-footnote">Analyse personnelle · avril 2026</div>
+        </div>
+      </article>
+
+    </div>
+
+    <!-- Conclusion -->
+    <div class="veille-conclusion">
+      <h4>Ce que j'en retiens</h4>
+      <p>
+        La souveraineté numérique n'est pas du nationalisme technologique : c'est garantir qu'un État démocratique garde le contrôle de ses fonctions essentielles. La France a le talent — ce qui a manqué, c'est la stratégie industrielle et l'ambition à l'échelle européenne. La prise de conscience est là ; combler vingt ans de retard prendra du temps, de l'argent, et surtout une volonté politique constante au-delà des alternances.
+      </p>
+    </div>
+
+    <!-- Sources -->
+    <div class="veille-sources">
+      <h4>Sources &amp; lectures</h4>
+      <ul>
+        <li><a href="https://www.youtube.com/watch?v=BjS5ibiJcDA" target="_blank" rel="noopener">Thinkerview — Tariq Krim &amp; Bernard Benhamou, <em>Souveraineté numérique, la douche froide ?</em></a></li>
+        <li><a href="https://www.youtube.com/watch?v=fmreiVK4bOk" target="_blank" rel="noopener">Underscore_ / Micode — Quentin Adam (Clever Cloud), <em>La France a raté le Cloud</em></a></li>
+        <li><a href="https://www.cigref.fr/place-de-marche-du-cloud-en-europe-le-cigref-publie-une-analyse-inedite" target="_blank" rel="noopener">Cigref — Rapport dépenses cloud européennes, 2025</a></li>
+        <li><a href="https://cyber.gouv.fr/secnumcloud-pour-les-fournisseurs-de-services-cloud" target="_blank" rel="noopener">ANSSI — Référentiel SecNumCloud 3.2</a></li>
+        <li><a href="https://www.laquadrature.net/?s=souverainet%C3%A9+num%C3%A9rique" target="_blank" rel="noopener">La Quadrature du Net — Analyses sur le sovereignty washing</a></li>
+        <li><a href="https://digital-strategy.ec.europa.eu/fr/policies/regulatory-framework-ai" target="_blank" rel="noopener">Commission européenne — DMA, DSA, AI Act</a></li>
+      </ul>
+    </div>
+
+  </section>
+
+  <!-- ============================================= -->
+  <!-- AUTRES CENTRES D'INTÉRÊT                       -->
+  <!-- ============================================= -->
+  <section class="block reveal" style="margin-top: 6rem;">
+    <div class="section-head">
+      <div>
+        <span class="eyebrow">Hors-écran</span>
+        <h2>Autres passions</h2>
+      </div>
+      <span class="section-head-count">03 · 2026</span>
+    </div>
+
+    <div class="interests-grid reveal-stagger">
+
+      <div class="interest-card">
+        <div class="interest-glyph">L.</div>
+        <h3 class="interest-title">Lecture</h3>
+        <ul class="interest-list">
+          <li>Mangas japonais</li>
+          <li>Bandes dessinées</li>
+          <li>Lectures en anglais</li>
+        </ul>
+      </div>
+
+      <div class="interest-card">
+        <div class="interest-glyph">G.</div>
+        <h3 class="interest-title">Jeux vidéo</h3>
+        <ul class="interest-list">
+          <li>Explorer des univers virtuels</li>
+          <li>Comprendre les mécaniques de gameplay</li>
+          <li>Analyser la conception des jeux</li>
+        </ul>
+      </div>
+
+      <div class="interest-card">
+        <div class="interest-glyph">3D.</div>
+        <h3 class="interest-title">Impression 3D</h3>
+        <ul class="interest-list">
+          <li>Fabriquer des pièces sur mesure</li>
+          <li>Créer des prototypes fonctionnels</li>
+          <li>Réaliser des objets décoratifs</li>
+        </ul>
+      </div>
+
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="footer-mark">Jules Renard.</div>
+    <div class="footer-meta">
+      <span>© 2025 · Portfolio BTS SIO</span>
+      <a href="#" onclick="scrollToTop(); return false;" class="footer-to-top">↑ Haut de page</a>
+    </div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+<script>
+// ===== Timeline filter + reveal =====
+(function timelineInteractions() {
+  const navBtns = document.querySelectorAll('.tl-nav-btn');
+  const items = document.querySelectorAll('.tl-item');
+  const spineFill = document.querySelector('.tl-spine-fill');
+  const timeline = document.querySelector('.veille-timeline');
+
+  if (!items.length) return;
+
+  // Filter
+  navBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      const f = btn.dataset.filter;
+      navBtns.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      items.forEach(it => {
+        const match = f === 'all' || it.dataset.kind === f;
+        it.style.display = match ? '' : 'none';
+      });
+    });
+  });
+
+  // In-view animation
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) e.target.classList.add('in-view');
+    });
+  }, { threshold: 0.2 });
+  items.forEach(it => io.observe(it));
+
+  // Spine fill based on scroll progress inside timeline
+  function updateSpine() {
+    if (!timeline || !spineFill) return;
+    const rect = timeline.getBoundingClientRect();
+    const viewportMid = window.innerHeight * 0.5;
+    const progress = Math.max(0, Math.min(1, (viewportMid - rect.top) / rect.height));
+    spineFill.style.height = (progress * 100) + '%';
+  }
+  window.addEventListener('scroll', updateSpine, { passive: true });
+  window.addEventListener('resize', updateSpine);
+  updateSpine();
+})();
+</script>
 </body>
 </html>

@@ -3,152 +3,187 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Compétences et outils - Jules Renard">
-  <title>Compétences - Jules Renard</title>
+  <meta name="description" content="Compétences techniques et savoir-être — Jules Renard">
+  <title>Compétences — Jules Renard</title>
 
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
-<body class="page-competences">
-  <nav>
-    <div class="nav-container">
-      <a href="index.html" class="nav-logo">Jules Renard</a>
-      <div class="nav-links">
-        <a href="index.html">À propos</a>
-        <a href="competences.html" class="active">Compétences</a>
-        <a href="projets.html">Projets</a>
-        <a href="interets.html">Centres d'intérêt</a>
+<body>
+
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo">
+      <span class="nav-logo-mark">JR</span>
+      <span>Jules Renard</span>
+    </a>
+    <div class="nav-links">
+      <a href="index.html" class="nav-link">À propos</a>
+      <a href="competences.html" class="nav-link">Compétences</a>
+      <a href="projets.html" class="nav-link">Projets</a>
+      <a href="interets.html" class="nav-link">Centres d'intérêt</a>
+      <a href="mailto:julesrenad27@gmail.com" class="nav-cta">Me contacter</a>
+    </div>
+    <button class="menu-toggle" aria-label="Menu">☰</button>
+  </div>
+</nav>
+
+<main>
+
+  <section class="reveal" style="padding: 3rem 0 2rem;">
+    <span class="eyebrow">Boîte à outils</span>
+    <h1 style="font-size: clamp(2.5rem, 5vw, 4rem); margin: 1.2rem 0 1.5rem; line-height: 1.05;">
+      Compétences <span style="font-style: italic; color: var(--sage-deep);">& outils</span>
+    </h1>
+    <p class="skills-intro">
+      Un aperçu des environnements, langages et méthodes que j'utilise au quotidien dans ma formation et mes projets. En cours de consolidation — chaque nouveau projet en ajoute une pierre.
+    </p>
+  </section>
+
+  <!-- Éditeurs -->
+  <section class="skills-category reveal">
+    <div class="skills-category-head">
+      <span class="skills-category-num">01</span>
+      <h2 class="skills-category-title">Éditeurs & IDE</h2>
+    </div>
+    <div class="skills-grid reveal-stagger">
+      <div class="skill-card">
+        <span class="skill-tag">Éditeur</span>
+        <div class="skill-name">VS Code</div>
+        <p class="skill-desc">Éditeur principal pour le développement web, extensions et débogage intégré.</p>
+      </div>
+      <div class="skill-card">
+        <span class="skill-tag">IDE Java</span>
+        <div class="skill-name">Eclipse</div>
+        <p class="skill-desc">Développement d'applications et de projets en programmation orientée objet.</p>
+      </div>
+      <div class="skill-card">
+        <span class="skill-tag">IDE Java</span>
+        <div class="skill-name">IntelliJ IDEA</div>
+        <p class="skill-desc">Utilisé ponctuellement pour des projets Spring Boot et refactoring avancé.</p>
       </div>
     </div>
-    <button class="menu-toggle" aria-label="Menu">
-      <i class="fas fa-bars"></i>
-    </button>
-  </nav>
+  </section>
 
-  <main>
-    <section>
-      <h2><i class="fas fa-code"></i> Éditeurs & IDE</h2>
-      <div class="competences-grid">
-        <div class="competence-card">
-          <div class="competence-icon">
-            <i class="fas fa-code"></i>
-          </div>
-          <h3>VS Code</h3>
-          <p>Éditeur de code principal pour le développement web, avec extensions et débogage intégré.</p>
-        </div>
-
-        <div class="competence-card">
-          <div class="competence-icon">
-            <i class="fas fa-laptop-code"></i>
-          </div>
-          <h3>Eclipse</h3>
-          <p>IDE Java utilisé pour le développement d'applications et de projets en programmation orientée objet.</p>
-        </div>
+  <!-- Infra -->
+  <section class="skills-category reveal">
+    <div class="skills-category-head">
+      <span class="skills-category-num">02</span>
+      <h2 class="skills-category-title">Infrastructure & environnement</h2>
+    </div>
+    <div class="skills-grid reveal-stagger">
+      <div class="skill-card">
+        <span class="skill-tag">Conteneurs</span>
+        <div class="skill-name">Docker</div>
+        <p class="skill-desc">Conteneurisation d'applications pour des environnements reproductibles et isolés.</p>
       </div>
-    </section>
-
-    <section>
-      <h2><i class="fas fa-server"></i> Infrastructure & Environnement</h2>
-      <div class="competences-grid">
-        <div class="competence-card">
-          <div class="competence-icon">
-            <i class="fab fa-docker"></i>
-          </div>
-          <h3>Docker</h3>
-          <p>Conteneurisation d'applications pour des environnements de développement reproductibles et isolés.</p>
-        </div>
-
-        <div class="competence-card">
-          <div class="competence-icon">
-            <i class="fas fa-server"></i>
-          </div>
-          <h3>XAMPP</h3>
-          <p>Serveur local Apache, MySQL et PHP pour le développement et le test d'applications web.</p>
-        </div>
+      <div class="skill-card">
+        <span class="skill-tag">Stack locale</span>
+        <div class="skill-name">XAMPP</div>
+        <p class="skill-desc">Serveur local Apache / MySQL / PHP pour le développement et le test d'applications web.</p>
       </div>
-    </section>
-
-    <section>
-      <h2><i class="fas fa-flask"></i> Test & Sécurité</h2>
-      <div class="competences-grid">
-        <div class="competence-card">
-          <div class="competence-icon">
-            <i class="fas fa-paper-plane"></i>
-          </div>
-          <h3>Postman</h3>
-          <p>Test et documentation d'API REST, création de collections de requêtes et automatisation.</p>
-        </div>
-
-        <div class="competence-card">
-          <div class="competence-icon">
-            <i class="fas fa-shield-alt"></i>
-          </div>
-          <h3>Burp Suite</h3>
-          <p>Outil de test de sécurité web pour l'analyse de vulnérabilités et l'interception de requêtes HTTP.</p>
-        </div>
+      <div class="skill-card">
+        <span class="skill-tag">SGBD</span>
+        <div class="skill-name">MySQL</div>
+        <p class="skill-desc">Conception de bases relationnelles, écriture de requêtes et modélisation MCD.</p>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <section>
-      <h2><i class="fas fa-tasks"></i> Gestion & Collaboration</h2>
-      <div class="competences-grid">
-        <div class="competence-card">
-          <div class="competence-icon">
-            <i class="fab fa-github"></i>
-          </div>
-          <h3>GitHub</h3>
-          <p>Versionnement de code avec Git, collaboration via pull requests et gestion de dépôts.</p>
-        </div>
-
-        <div class="competence-card">
-          <div class="competence-icon">
-            <i class="fab fa-trello"></i>
-          </div>
-          <h3>Trello / Confluence</h3>
-          <p>Gestion de projet agile, organisation des tâches et documentation collaborative en équipe.</p>
-        </div>
+  <!-- Test & sécu -->
+  <section class="skills-category reveal">
+    <div class="skills-category-head">
+      <span class="skills-category-num">03</span>
+      <h2 class="skills-category-title">Test & sécurité</h2>
+    </div>
+    <div class="skills-grid reveal-stagger">
+      <div class="skill-card">
+        <span class="skill-tag">API</span>
+        <div class="skill-name">Postman</div>
+        <p class="skill-desc">Test et documentation d'API REST, collections de requêtes, automatisation.</p>
       </div>
-    </section>
-
-    <section>
-      <h2><i class="fas fa-users"></i> Savoir-être</h2>
-      <div class="competences-grid">
-        <div class="competence-card">
-          <div class="competence-icon">
-            <i class="fas fa-people-carry"></i>
-          </div>
-          <h3>Travail d'équipe</h3>
-          <p>Capacité à collaborer efficacement au sein d'un groupe, partager les connaissances et contribuer aux objectifs communs.</p>
-        </div>
-
-        <div class="competence-card">
-          <div class="competence-icon">
-            <i class="fas fa-clipboard-list"></i>
-          </div>
-          <h3>Sens de l'organisation</h3>
-          <p>Planification rigoureuse des tâches, respect des délais et gestion des priorités pour mener les projets à bien.</p>
-        </div>
-
-        <div class="competence-card">
-          <div class="competence-icon">
-            <i class="fas fa-brain"></i>
-          </div>
-          <h3>Capacité d'analyse</h3>
-          <p>Aptitude à décomposer des problèmes complexes, identifier les causes et proposer des solutions adaptées.</p>
-        </div>
+      <div class="skill-card">
+        <span class="skill-tag">Cybersécurité</span>
+        <div class="skill-name">Burp Suite</div>
+        <p class="skill-desc">Analyse de vulnérabilités web et interception de requêtes HTTP.</p>
       </div>
-    </section>
-  </main>
+      <div class="skill-card">
+        <span class="skill-tag">Référentiel</span>
+        <div class="skill-name">OWASP Top 10</div>
+        <p class="skill-desc">Mise en pratique via CTF : injections SQL, XSS, broken auth, data exposure.</p>
+      </div>
+    </div>
+  </section>
 
-  <footer>
-    <p>&copy; 2025 Jules Renard | Créé avec passion</p>
-    <p class="footer-links">
-      <a href="#" onclick="scrollToTop(); return false;">
-        <i class="fas fa-arrow-up"></i> Haut de page
-      </a>
-    </p>
-  </footer>
+  <!-- Collaboration -->
+  <section class="skills-category reveal">
+    <div class="skills-category-head">
+      <span class="skills-category-num">04</span>
+      <h2 class="skills-category-title">Gestion & collaboration</h2>
+    </div>
+    <div class="skills-grid reveal-stagger">
+      <div class="skill-card">
+        <span class="skill-tag">Versioning</span>
+        <div class="skill-name">Git · GitHub</div>
+        <p class="skill-desc">Versionnement de code, branches de travail, collaboration via pull requests.</p>
+      </div>
+      <div class="skill-card">
+        <span class="skill-tag">Agile</span>
+        <div class="skill-name">Trello</div>
+        <p class="skill-desc">Gestion de tâches et suivi de projets agiles en kanban.</p>
+      </div>
+      <div class="skill-card">
+        <span class="skill-tag">Documentation</span>
+        <div class="skill-name">Confluence</div>
+        <p class="skill-desc">Espace documentaire collaboratif pour centraliser les connaissances d'équipe.</p>
+      </div>
+    </div>
+  </section>
 
-  <script src="script.js"></script>
+  <!-- Savoir-être -->
+  <section class="skills-category reveal">
+    <div class="skills-category-head">
+      <span class="skills-category-num">05</span>
+      <h2 class="skills-category-title">Savoir-être</h2>
+    </div>
+    <div class="skills-grid reveal-stagger">
+      <div class="skill-card">
+        <span class="skill-tag">Soft skill</span>
+        <div class="skill-name">Travail d'équipe</div>
+        <p class="skill-desc">Collaborer efficacement, partager les connaissances et contribuer aux objectifs communs.</p>
+      </div>
+      <div class="skill-card">
+        <span class="skill-tag">Soft skill</span>
+        <div class="skill-name">Sens de l'organisation</div>
+        <p class="skill-desc">Planification rigoureuse, respect des délais, gestion des priorités.</p>
+      </div>
+      <div class="skill-card">
+        <span class="skill-tag">Soft skill</span>
+        <div class="skill-name">Capacité d'analyse</div>
+        <p class="skill-desc">Décomposer des problèmes complexes, identifier les causes, proposer des solutions.</p>
+      </div>
+      <div class="skill-card">
+        <span class="skill-tag">Soft skill</span>
+        <div class="skill-name">Curiosité</div>
+        <p class="skill-desc">Veille continue, exploration de nouveaux outils et langages au-delà du programme.</p>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="footer-mark">Jules Renard.</div>
+    <div class="footer-meta">
+      <span>© 2025 · Portfolio BTS SIO</span>
+      <a href="#" onclick="scrollToTop(); return false;" class="footer-to-top">↑ Haut de page</a>
+    </div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
 </body>
 </html>

@@ -3,185 +3,186 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Portfolio de Jules Renard, étudiant en BTS SIO passionné par le développement web et l'informatique">
-  <meta name="keywords" content="Jules Renard, BTS SIO, développeur, portfolio, Java, Python, Angular">
+  <meta name="description" content="Portfolio de Jules Renard — étudiant en BTS SIO, développeur passionné par le web et la sécurité.">
   <meta name="author" content="Jules Renard">
+  <title>Jules Renard — Portfolio</title>
 
-  <!-- Open Graph / Facebook -->
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://julesrenardportfolio.github.io/">
-  <meta property="og:title" content="Jules Renard - Portfolio">
-  <meta property="og:description" content="Étudiant en BTS SIO | Passionné d'informatique et de développement">
-
-  <title>Jules Renard - Portfolio</title>
-
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
-<body class="page-apropos">
-  <nav>
-    <div class="nav-container">
-      <a href="index.html" class="nav-logo">Jules Renard</a>
-      <div class="nav-links">
-        <a href="index.html" class="active">À propos</a>
-        <a href="competences.html">Compétences</a>
-        <a href="projets.html">Projets</a>
-        <a href="interets.html">Centres d'intérêt</a>
+<body>
+
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo">
+      <span class="nav-logo-mark">JR</span>
+      <span>Jules Renard</span>
+    </a>
+    <div class="nav-links">
+      <a href="index.html" class="nav-link">À propos</a>
+      <a href="competences.html" class="nav-link">Compétences</a>
+      <a href="projets.html" class="nav-link">Projets</a>
+      <a href="interets.html" class="nav-link">Centres d'intérêt</a>
+      <a href="mailto:julesrenad27@gmail.com" class="nav-cta">Me contacter</a>
+    </div>
+    <button class="menu-toggle" aria-label="Menu">☰</button>
+  </div>
+</nav>
+
+<main>
+
+  <!-- HERO -->
+  <section class="hero reveal">
+    <div class="hero-text">
+      <span class="eyebrow">Portfolio · BTS SIO · 2024–2026</span>
+      <h1 class="hero-title">
+        <span class="line">Jules Renard,</span>
+        <span class="line"><span class="italic">apprenti</span> développeur</span>
+      </h1>
+      <p class="hero-lede">
+        Étudiant en <strong>BTS Services Informatiques aux Organisations</strong>, motivé par l'envie de développer mes compétences techniques et de contribuer à des projets concrets. Curieux, rigoureux, je cherche aujourd'hui à rejoindre <strong>SupInfo</strong> pour poursuivre mon parcours.
+      </p>
+      <div class="hero-meta">
+        <span class="hero-meta-item"><span class="dot live"></span>Ouvert à l'alternance</span>
+        <span class="hero-meta-item"><span class="dot"></span>Breteuil · Normandie</span>
+        <span class="hero-meta-item"><span class="dot"></span>Java · Angular · Spring</span>
       </div>
     </div>
-    <button class="menu-toggle" aria-label="Menu">
-      <i class="fas fa-bars"></i>
-    </button>
-  </nav>
+    <div class="hero-photo">
+      <img src="images/profil.jpg" alt="Portrait de Jules Renard">
+    </div>
+  </section>
 
-  <main>
-    <section>
-      <h2>Apprentit Développeur</h2>
-      <div class="profil-section">
-        <div class="profil-text">
-          <p>
-            Étudiant en <strong>BTS Services Informatiques aux Organisations (SIO)</strong>,
-            je suis motivé par l'envie de développer mes compétences techniques et
-            de contribuer à des projets innovants. Curieux, rigoureux et capable
-            de m'adapter rapidement, j'aime relever de nouveaux <strong>défis</strong> dans
-            le domaine du numérique.
-          </p>
-        </div>
-        <div class="profil-photo">
-          <img src="images/profil.jpg" alt="Photo de Jules Renard">
-        </div>
+  <!-- FORMATION -->
+  <section class="block reveal">
+    <div class="section-head">
+      <div>
+        <span class="eyebrow">Parcours</span>
+        <h2>Formation</h2>
       </div>
-    </section>
+      <span class="section-head-count">01 / 03</span>
+    </div>
 
-    <section>
-      <h2>Formation</h2>
-      <div class="timeline">
-        <div class="timeline-item">
-          <div class="timeline-circle">
-            <i class="fas fa-graduation-cap"></i>
-          </div>
-          <div class="timeline-content">
-            <h3>2016 - 2019</h3>
-            <h4>BAC S</h4>
-            <p>Verneuil</p>
-          </div>
-        </div>
-
-        <div class="timeline-item">
-          <div class="timeline-circle">
-            <i class="fas fa-cogs"></i>
-          </div>
-          <div class="timeline-content">
-            <h3>2019 - 2021</h3>
-            <h4>BTS CPRP</h4>
-            <p>Rouen</p>
-          </div>
-        </div>
-
-        <div class="timeline-item">
-          <div class="timeline-circle">
-            <i class="fas fa-book"></i>
-          </div>
-          <div class="timeline-content">
-            <h3>2021 - 2022</h3>
-            <h4>Année de Prépa ATS</h4>
-            <p></p>
-          </div>
-        </div>
-
-        <div class="timeline-item">
-          <div class="timeline-circle">
-            <i class="fas fa-university"></i>
-          </div>
-          <div class="timeline-content">
-            <h3>2022 - 2023</h3>
-            <h4>Université du Littoral Côte d'Opale</h4>
-            <p>Calais</p>
-          </div>
-        </div>
-
-        <div class="timeline-item">
-          <div class="timeline-circle">
-            <i class="fas fa-laptop-code"></i>
-          </div>
-          <div class="timeline-content">
-            <h3>2023 - 2025</h3>
-            <h4>BTS Services informatiques aux Organisations</h4>
-            <p>L'Aigle</p>
-          </div>
-        </div>
-
-        <div class="timeline-item">
-          <div class="timeline-circle">
-            <i class="fas fa-rocket"></i>
-          </div>
-          <div class="timeline-content">
-            <h3>2026 - 2029</h3>
-            <h4>SupInfo</h4>
-            <p>Caen</p>
-          </div>
-        </div>
+    <div class="formation-timeline reveal-stagger">
+      <div class="formation-item">
+        <div class="formation-year">2016 — 2019</div>
+        <div class="formation-dot"></div>
+        <div class="formation-title">Baccalauréat S</div>
+        <div class="formation-place">Verneuil</div>
       </div>
-    </section>
-
-    <section>
-      <h2>Certifications</h2>
-      <div class="certifications-grid">
-        <div class="certification-card">
-          <i class="fas fa-award"></i>
-          <h3>PIX</h3>
-          <p class="certification-score">551 points</p>
-          <p>Certification des compétences numériques attestant la maîtrise des outils informatiques, de la protection des données et de la création de contenu numérique.</p>
-        </div>
-        <div class="certification-card">
-          <i class="fas fa-shield-alt"></i>
-          <h3>ANSSI</h3>
-          <p>Formation aux bonnes pratiques de cybersécurité délivrée par l'Agence Nationale de la Sécurité des Systèmes d'Information.</p>
-        </div>
-        <div class="certification-card">
-          <i class="fas fa-user-shield"></i>
-          <h3>CNIL</h3>
-          <p>Sensibilisation à la protection des données personnelles et au Règlement Général sur la Protection des Données (RGPD).</p>
-        </div>
+      <div class="formation-item">
+        <div class="formation-year">2019 — 2021</div>
+        <div class="formation-dot"></div>
+        <div class="formation-title">BTS CPRP</div>
+        <div class="formation-place">Rouen</div>
       </div>
-    </section>
+      <div class="formation-item">
+        <div class="formation-year">2021 — 2022</div>
+        <div class="formation-dot"></div>
+        <div class="formation-title">Prépa ATS</div>
+        <div class="formation-place">—</div>
+      </div>
+      <div class="formation-item">
+        <div class="formation-year">2022 — 2023</div>
+        <div class="formation-dot"></div>
+        <div class="formation-title">Université ULCO</div>
+        <div class="formation-place">Calais</div>
+      </div>
+      <div class="formation-item current">
+        <div class="formation-year">2023 — 2025</div>
+        <div class="formation-dot"></div>
+        <div class="formation-title">BTS SIO</div>
+        <div class="formation-place">L'Aigle</div>
+      </div>
+      <div class="formation-item">
+        <div class="formation-year">2026 — 2029</div>
+        <div class="formation-dot"></div>
+        <div class="formation-title">SupInfo</div>
+        <div class="formation-place">Caen</div>
+      </div>
+    </div>
+  </section>
 
-    <section class="contact-section">
-      <h2><i class="fas fa-envelope"></i>&nbsp; Contact</h2>
-      <div class="contact-grid">
-        <a href="tel:+33614645402" class="contact-card">
-          <i class="fas fa-phone"></i>
-          <span>06 14 64 54 02</span>
-        </a>
-        <a href="mailto:julesrenad27@gmail.com" class="contact-card">
-          <i class="fas fa-envelope"></i>
-          <span>julesrenad27@gmail.com</span>
-        </a>
-        <div class="contact-card">
-          <i class="fas fa-map-marker-alt"></i>
-          <span>Breteuil, France</span>
+  <!-- CERTIFICATIONS -->
+  <section class="block reveal">
+    <div class="section-head">
+      <div>
+        <span class="eyebrow">Reconnaissance</span>
+        <h2>Certifications</h2>
+      </div>
+      <span class="section-head-count">02 / 03</span>
+    </div>
+
+    <div class="certs-grid reveal-stagger">
+      <div class="cert-card">
+        <div class="cert-head">
+          <h3 class="cert-name">PIX</h3>
+          <span class="cert-score">551 pts</span>
         </div>
+        <p class="cert-desc">Certification des compétences numériques attestant la maîtrise des outils informatiques, de la protection des données et de la création de contenu numérique.</p>
       </div>
-      <div class="social-links">
-        <a href="https://github.com/julesrenard" target="_blank" rel="noopener noreferrer" class="social-btn">
-          <i class="fab fa-github"></i> GitHub
-        </a>
-        <a href="https://linkedin.com/in/julesrenard" target="_blank" rel="noopener noreferrer" class="social-btn">
-          <i class="fab fa-linkedin"></i> LinkedIn
-        </a>
+      <div class="cert-card">
+        <div class="cert-head">
+          <h3 class="cert-name">ANSSI</h3>
+          <span class="cert-score">MOOC</span>
+        </div>
+        <p class="cert-desc">Formation aux bonnes pratiques de cybersécurité délivrée par l'Agence Nationale de la Sécurité des Systèmes d'Information.</p>
       </div>
-    </section>
-  </main>
+      <div class="cert-card">
+        <div class="cert-head">
+          <h3 class="cert-name">CNIL</h3>
+          <span class="cert-score">RGPD</span>
+        </div>
+        <p class="cert-desc">Sensibilisation à la protection des données personnelles et au Règlement Général sur la Protection des Données.</p>
+      </div>
+    </div>
+  </section>
 
-  <footer>
-    <p>© 2025 Jules Renard | Créé avec passion</p>
-    <p class="footer-links">
-      <a href="#" onclick="scrollToTop(); return false;">
-        <i class="fas fa-arrow-up"></i> Haut de page
+  <!-- CONTACT -->
+  <section class="block reveal">
+    <div class="section-head">
+      <div>
+        <span class="eyebrow">Prendre contact</span>
+        <h2>Me joindre</h2>
+      </div>
+      <span class="section-head-count">03 / 03</span>
+    </div>
+
+    <div class="contact-row">
+      <a href="mailto:julesrenad27@gmail.com" class="contact-item">
+        <div class="contact-label">Email</div>
+        <div class="contact-value">julesrenad27@gmail.com</div>
       </a>
-    </p>
-  </footer>
+      <a href="tel:+33614645402" class="contact-item">
+        <div class="contact-label">Téléphone</div>
+        <div class="contact-value">06 14 64 54 02</div>
+      </a>
+      <div class="contact-item">
+        <div class="contact-label">Localisation</div>
+        <div class="contact-value">Breteuil, France</div>
+      </div>
+    </div>
 
-  <script src="script.js"></script>
+    <div class="social-row">
+      <a href="https://github.com/julesrenard" target="_blank" rel="noopener" class="social-btn">↗ GitHub</a>
+      <a href="https://linkedin.com/in/julesrenard" target="_blank" rel="noopener" class="social-btn">↗ LinkedIn</a>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="footer-mark">Jules Renard.</div>
+    <div class="footer-meta">
+      <span>© 2025 · Portfolio BTS SIO</span>
+      <a href="#" onclick="scrollToTop(); return false;" class="footer-to-top">↑ Haut de page</a>
+    </div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
 </body>
 </html>

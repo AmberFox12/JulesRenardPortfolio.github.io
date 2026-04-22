@@ -1,222 +1,120 @@
-// ===== Menu Toggle Mobile =====
-const menuToggle = document.querySelector('.menu-toggle');
-const navLinksContainer = document.querySelector('.nav-links');
-
-if (menuToggle && navLinksContainer) {
-  menuToggle.addEventListener('click', () => {
-    navLinksContainer.classList.toggle('active');
-    const icon = menuToggle.querySelector('i');
-
-    if (navLinksContainer.classList.contains('active')) {
-      icon.classList.replace('fa-bars', 'fa-times');
-    } else {
-      icon.classList.replace('fa-times', 'fa-bars');
-    }
+// ===== Active nav link =====
+(function markActive() {
+  const current = (location.pathname.split('/').pop() || 'index.html').toLowerCase();
+  document.querySelectorAll('.nav-link').forEach(a => {
+    const href = (a.getAttribute('href') || '').toLowerCase();
+    if (href === current) a.classList.add('active');
   });
+})();
 
-  // Fermer le menu en cliquant sur un lien
-  const navLinksItems = navLinksContainer.querySelectorAll('a');
-  navLinksItems.forEach(link => {
-    link.addEventListener('click', () => {
-      if (window.innerWidth <= 768) {
-        navLinksContainer.classList.remove('active');
-        menuToggle.querySelector('i').classList.replace('fa-times', 'fa-bars');
+// ===== Mobile menu toggle =====
+(function menu() {
+  const btn = document.querySelector('.menu-toggle');
+  const list = document.querySelector('.nav-links');
+  if (!btn || !list) return;
+  btn.addEventListener('click', () => {
+    list.classList.toggle('open');
+  });
+})();
+
+// ===== Scroll reveal =====
+(function reveal() {
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        e.target.classList.add('visible');
+        io.unobserve(e.target);
       }
     });
-  });
-}
+  }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
 
-// ===== Scroll to Top =====
+  document.querySelectorAll('.reveal, .reveal-stagger').forEach(el => io.observe(el));
+})();
+
+// ===== Scroll to top =====
 function scrollToTop() {
-  window.scrollTo({
-    top: 0,
-    behavior: 'smooth'
-  });
+  window.scrollTo({ top: 0, behavior: 'smooth' });
 }
+window.scrollToTop = scrollToTop;
 
-// ===== Animations au scroll =====
-const observerOptions = {
-  threshold: 0.1,
-  rootMargin: '0px 0px -50px 0px'
-};
+// ===== Project filters =====
+(function projectFilters() {
+  const filters = document.querySelectorAll('.filter-btn');
+  const cards = document.querySelectorAll('.project-card');
+  if (!filters.length || !cards.length) return;
 
-const observer = new IntersectionObserver((entries) => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      entry.target.classList.add('visible');
-    }
-  });
-}, observerOptions);
+  filters.forEach(btn => {
+    btn.addEventListener('click', () => {
+      const f = btn.dataset.filter;
+      filters.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
 
-// Observer toutes les sections
-document.addEventListener('DOMContentLoaded', () => {
-  const sections = document.querySelectorAll('section');
-  sections.forEach(section => {
-    section.classList.add('fade-in-scroll');
-    observer.observe(section);
-  });
-});
-
-// ===== Animation des barres de compétences =====
-const animateSkillBars = () => {
-  const skillBars = document.querySelectorAll('.skill-progress');
-
-  skillBars.forEach(bar => {
-    const width = bar.style.width;
-    bar.style.width = '0';
-
-    setTimeout(() => {
-      bar.style.width = width;
-    }, 100);
-  });
-};
-
-// Lancer l'animation des compétences quand la section est visible
-const skillsSection = document.querySelector('.skills-section');
-if (skillsSection) {
-  const skillsObserver = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        animateSkillBars();
-        skillsObserver.unobserve(entry.target);
-      }
-    });
-  }, { threshold: 0.3 });
-
-  skillsObserver.observe(skillsSection);
-}
-
-// ===== Active Navigation Link =====
-const currentPage = window.location.pathname.split('/').pop() || 'index.html';
-const navLinks = document.querySelectorAll('nav a');
-
-navLinks.forEach(link => {
-  const href = link.getAttribute('href');
-  if (href === currentPage) {
-    link.classList.add('active');
-  } else {
-    link.classList.remove('active');
-  }
-});
-
-// ===== Smooth Scroll pour tous les liens d'ancre =====
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-  anchor.addEventListener('click', function (e) {
-    e.preventDefault();
-    const target = document.querySelector(this.getAttribute('href'));
-    if (target) {
-      target.scrollIntoView({
-        behavior: 'smooth',
-        block: 'start'
+      cards.forEach(c => {
+        const tags = (c.dataset.tags || '').split(',');
+        if (f === 'all' || tags.includes(f)) {
+          c.classList.remove('hidden');
+        } else {
+          c.classList.add('hidden');
+        }
       });
-    }
+    });
   });
-});
+})();
 
-// ===== Animation au chargement =====
-window.addEventListener('load', () => {
-  document.body.style.opacity = '0';
-  setTimeout(() => {
-    document.body.style.transition = 'opacity 0.5s ease';
-    document.body.style.opacity = '1';
-  }, 100);
-});
-
-// ===== Modal Photos =====
+// ===== Project photo modal =====
 const projectPhotos = {
   'jeu-probleme': {
-    title: 'Jeu Problème - Photos',
+    title: 'Jeu Problème — Captures',
     photos: [
-      {
-        src: 'images/Acceuil.png',
-        title: 'Page d\'accueil',
-        icon: 'fa-home',
-        description: 'Interface d\'accueil avec les options principales du jeu'
-      },
-      {
-        src: 'images/Classement.png',
-        title: 'Classement',
-        icon: 'fa-trophy',
-        description: 'Tableau des meilleurs scores et classement des joueurs'
-      },
-      {
-        src: 'images/Historique.png',
-        title: 'Historique',
-        icon: 'fa-history',
-        description: 'Historique des parties jouées et statistiques'
-      },
-      {
-        src: 'images/Jeux.png',
-        title: 'Interface de jeu',
-        icon: 'fa-gamepad',
-        description: 'Zone de jeu avec les problèmes de programmation et éditeur de code'
-      }
+      { src: 'images/Acceuil.png', title: 'Page d\'accueil', description: 'Interface d\'accueil avec les options principales du jeu.' },
+      { src: 'images/Jeux.png', title: 'Interface de jeu', description: 'Zone de jeu avec les problèmes de programmation et éditeur de code.' },
+      { src: 'images/Classement.png', title: 'Classement', description: 'Tableau des meilleurs scores et classement des joueurs.' },
+      { src: 'images/Historique.png', title: 'Historique', description: 'Historique des parties jouées et statistiques.' }
     ]
   },
   'rftg': {
-    title: 'Application RFTG - Schémas',
+    title: 'Application RFTG — Schémas',
     photos: [
-      {
-        src: 'images/SchémaArchitecture.png',
-        title: 'Schéma d\'Architecture',
-        icon: 'fa-sitemap',
-        description: 'Architecture client-serveur avec API REST Spring Boot, frontend Laravel/Android et base MySQL'
-      },
-      {
-        src: 'images/MCD_RFTG.png',
-        title: 'Modèle Conceptuel de Données',
-        icon: 'fa-database',
-        description: 'MCD de l\'application avec les tables clients, dvd, livraisons et locations'
-      }
+      { src: 'images/SchemaArchitecture.png', title: 'Architecture', description: 'Architecture client-serveur avec API REST Spring Boot, frontend Laravel/Android et base MySQL.' },
+      { src: 'images/MCD_RFTG.png', title: 'Modèle conceptuel de données', description: 'MCD de l\'application : clients, dvd, livraisons et locations.' }
     ]
   }
 };
 
-function openPhotoModal(projectId) {
+function openPhotoModal(id) {
   const modal = document.getElementById('photoModal');
-  const modalTitle = document.getElementById('modalTitle');
-  const modalGallery = document.getElementById('modalGallery');
+  const title = document.getElementById('modalTitle');
+  const gallery = document.getElementById('modalGallery');
+  const p = projectPhotos[id];
+  if (!modal || !p) return;
 
-  const project = projectPhotos[projectId];
-  if (!project) return;
-
-  modalTitle.textContent = project.title;
-  modalGallery.innerHTML = '';
-
-  project.photos.forEach(photo => {
-    const photoItem = document.createElement('div');
-    photoItem.className = 'modal-photo-item';
-    photoItem.innerHTML = `
-      <img src="${photo.src}" alt="${photo.title}" onclick="window.open(this.src, '_blank')">
+  title.textContent = p.title;
+  gallery.innerHTML = p.photos.map(ph => `
+    <div class="modal-photo">
+      <img src="${ph.src}" alt="${ph.title}" onclick="window.open(this.src, '_blank')">
       <div class="modal-photo-caption">
-        <h3><i class="fas ${photo.icon}"></i> ${photo.title}</h3>
-        <p>${photo.description}</p>
+        <h4>${ph.title}</h4>
+        <p>${ph.description}</p>
       </div>
-    `;
-    modalGallery.appendChild(photoItem);
-  });
+    </div>
+  `).join('');
 
   modal.classList.add('show');
   document.body.style.overflow = 'hidden';
 }
-
 function closePhotoModal() {
   const modal = document.getElementById('photoModal');
+  if (!modal) return;
   modal.classList.remove('show');
-  document.body.style.overflow = 'auto';
+  document.body.style.overflow = '';
 }
+window.openPhotoModal = openPhotoModal;
+window.closePhotoModal = closePhotoModal;
 
-// Fermer la modale en cliquant en dehors
-window.addEventListener('click', (e) => {
+window.addEventListener('click', e => {
   const modal = document.getElementById('photoModal');
-  if (e.target === modal) {
-    closePhotoModal();
-  }
+  if (modal && e.target === modal) closePhotoModal();
 });
-
-// Fermer la modale avec la touche Échap
-window.addEventListener('keydown', (e) => {
-  if (e.key === 'Escape') {
-    closePhotoModal();
-  }
+window.addEventListener('keydown', e => {
+  if (e.key === 'Escape') closePhotoModal();
 });

@@ -1,1 +1,0 @@
-# JulesRenardPortfolio.github.io
