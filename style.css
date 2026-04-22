@@ -271,7 +271,7 @@ section.block { margin-bottom: 5rem; }
   display: block;
 }
 .hero-photo::after {
-  content: "JR · 2025";
+  content: "JR · 2026";
   position: absolute;
   bottom: 1rem; left: 1rem;
   font-family: var(--font-mono);
@@ -297,7 +297,7 @@ section.block { margin-bottom: 5rem; }
   content: "";
   position: absolute;
   left: 0; right: 0;
-  top: 52px;
+  top: 60px;
   height: 1px;
   background: var(--line-strong);
   opacity: 0.4;
@@ -1142,12 +1142,13 @@ section.block { margin-bottom: 5rem; }
   inset: 0;
   display: grid;
   place-items: center;
+  align-content: center;
   padding: 1rem;
   background: var(--bg);
 }
 .project-thumb-logo img {
-  max-width: 85%;
-  max-height: 85%;
+  max-width: 90%;
+  max-height: 90%;
   width: auto;
   height: auto;
   object-fit: contain;
@@ -1199,6 +1200,24 @@ section.block { margin-bottom: 5rem; }
   transition: all 0.2s var(--ease);
 }
 .footer-to-top:hover { border-color: var(--ink); color: var(--ocre); }
+
+.footer-social {
+  display: flex;
+  gap: 1.2rem;
+}
+.footer-social-link {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: var(--ink-3);
+  border-bottom: 1px solid var(--line);
+  padding-bottom: 1px;
+  transition: color 0.2s var(--ease), border-color 0.2s var(--ease);
+}
+.footer-social-link:hover { color: var(--ink); border-color: var(--ink); }
+
+@media (max-width: 900px) {
+  .footer-social { order: 3; width: 100%; justify-content: center; }
+}
 
 /* ============================================ Scroll reveal */
 .reveal {
