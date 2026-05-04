@@ -160,7 +160,7 @@ ul { list-style: none; }
 main {
   max-width: var(--max-w);
   margin: 0 auto;
-  padding: 3rem 1.5rem 5rem;
+  padding: 3rem 1.5rem 0rem;
   position: relative;
   z-index: 1;
 }
@@ -205,6 +205,7 @@ h3 { font-size: 1.35rem; }
 }
 
 section.block { margin-bottom: 5rem; }
+section.block:last-child { margin-bottom: 2rem; }
 
 /* ============================================ Hero (À propos) */
 .hero {
@@ -427,10 +428,6 @@ section.block { margin-bottom: 5rem; }
   font-size: 1.25rem;
 }
 
-.social-row {
-  display: flex;
-  gap: 0.8rem;
-}
 .social-btn {
   display: inline-flex;
   align-items: center;
@@ -1296,8 +1293,8 @@ section.block { margin-bottom: 5rem; }
 /* ============================================ Footer */
 .footer {
   border-top: 1px solid var(--line);
-  margin-top: 3rem;
-  padding: 1.2rem 1.5rem 1.4rem;
+  margin-top: 0;
+  padding: 2rem 1.5rem 2.5rem;
   position: relative;
   z-index: 1;
 }
