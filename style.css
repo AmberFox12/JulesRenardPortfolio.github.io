@@ -660,6 +660,20 @@ section.block:last-child { margin-bottom: 2rem; }
   color: var(--ink-2);
   line-height: 1.55;
 }
+.skill-lang-icon {
+  font-size: 2.4rem;
+  display: block;
+  margin-bottom: 0.65rem;
+  line-height: 1;
+}
+.skill-lang-icon--api {
+  font-family: var(--font-mono);
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--sage-deep);
+  letter-spacing: -0.03em;
+}
+
 .skill-card--method { border-color: var(--sage); }
 .skill-card--method::before { background: var(--ocre); }
 .skill-copy {
