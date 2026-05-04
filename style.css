@@ -660,6 +660,14 @@ section.block:last-child { margin-bottom: 2rem; }
   color: var(--ink-2);
   line-height: 1.55;
 }
+.skill-card--method { border-color: var(--sage); }
+.skill-card--method::before { background: var(--ocre); }
+.skill-card--method .skill-tag { color: var(--sage-deep); }
+.skill-copy {
+  font-size: 0.8em;
+  color: var(--ink-3);
+  font-style: normal;
+}
 
 /* ============================================ Projets */
 .projects-filter {
@@ -1102,6 +1110,25 @@ section.block:last-child { margin-bottom: 2rem; }
 }
 .tl-body strong { color: var(--ink); font-weight: 600; }
 .tl-body em { color: var(--ocre); font-style: normal; font-weight: 500; }
+
+.tl-tags {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  margin-bottom: 1rem;
+}
+.tl-tags .tl-kind { margin-bottom: 0; }
+.tl-pillar {
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--ink-3);
+  padding: 0.2rem 0.65rem;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+}
 
 .tl-footnote {
   font-family: var(--font-mono);
