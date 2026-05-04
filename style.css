@@ -662,7 +662,6 @@ section.block:last-child { margin-bottom: 2rem; }
 }
 .skill-card--method { border-color: var(--sage); }
 .skill-card--method::before { background: var(--ocre); }
-.skill-card--method .skill-tag { color: var(--sage-deep); }
 .skill-copy {
   font-size: 0.8em;
   color: var(--ink-3);
