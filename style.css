@@ -444,6 +444,138 @@ section.block { margin-bottom: 5rem; }
 }
 .social-btn:hover { background: var(--ink); color: var(--bg); border-color: var(--ink); transform: translateY(-1px); }
 
+/* ============================================ Contact Form */
+.contact-intro {
+  color: var(--ink-2);
+  font-size: 0.95rem;
+  margin-bottom: 1.75rem;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+  margin-bottom: 1rem;
+}
+
+.form-label {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--ink-3);
+}
+
+.form-optional {
+  font-size: 0.65rem;
+  color: var(--ink-3);
+  text-transform: none;
+  letter-spacing: 0;
+}
+
+.form-input {
+  background: var(--bg-elev);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-sm);
+  padding: 0.85rem 1rem;
+  font-family: var(--font-sans);
+  font-size: 0.95rem;
+  color: var(--ink);
+  width: 100%;
+  outline: none;
+  transition: border-color 0.2s var(--ease), box-shadow 0.2s var(--ease);
+}
+.form-input:focus {
+  border-color: var(--sage-deep);
+  box-shadow: 0 0 0 3px var(--sage-soft);
+}
+.form-input::placeholder { color: var(--ink-3); }
+
+.form-textarea {
+  resize: vertical;
+  min-height: 140px;
+  line-height: 1.6;
+}
+
+.form-error {
+  color: var(--brick);
+  font-size: 0.875rem;
+  min-height: 1.25rem;
+  margin-bottom: 0.5rem;
+}
+
+.form-submit {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.85rem 2rem;
+  background: var(--ink);
+  color: var(--bg);
+  border: none;
+  border-radius: 999px;
+  font-family: var(--font-sans);
+  font-size: 0.95rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.25s var(--ease);
+}
+.form-submit:hover:not(:disabled) {
+  background: var(--sage-deep);
+  transform: translateY(-1px);
+}
+.form-submit:disabled { opacity: 0.6; cursor: not-allowed; }
+.form-submit.loading .btn-label { opacity: 0.7; }
+
+.btn-loader {
+  display: none;
+  width: 14px;
+  height: 14px;
+  border: 2px solid rgba(255,255,255,0.3);
+  border-top-color: #fff;
+  border-radius: 50%;
+  animation: spin 0.7s linear infinite;
+}
+.form-submit.loading .btn-loader { display: block; }
+@keyframes spin { to { transform: rotate(360deg); } }
+
+.success-msg {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  background: var(--sage-soft);
+  border: 1px solid var(--sage);
+  border-radius: var(--radius);
+  padding: 1.2rem 1.5rem;
+  margin-bottom: 1.5rem;
+}
+.success-icon {
+  width: 32px;
+  height: 32px;
+  background: var(--sage-deep);
+  color: #fff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.9rem;
+  flex-shrink: 0;
+}
+.success-title {
+  font-family: var(--font-serif);
+  font-size: 1.05rem;
+  margin-bottom: 0.2rem;
+}
+.success-sub {
+  color: var(--ink-2);
+  font-size: 0.9rem;
+}
+
 /* ============================================ Compétences */
 .skills-intro {
   font-size: 1.15rem;
@@ -1345,6 +1477,7 @@ section.block { margin-bottom: 5rem; }
 
   .certs-grid { grid-template-columns: 1fr; }
   .contact-row { grid-template-columns: 1fr; }
+  .form-row { grid-template-columns: 1fr; }
   .interests-grid { grid-template-columns: 1fr; }
 
   .project-card { grid-template-columns: 1fr; gap: 1rem; }

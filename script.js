@@ -118,3 +118,58 @@ window.addEventListener('click', e => {
 window.addEventListener('keydown', e => {
   if (e.key === 'Escape') closePhotoModal();
 });
+
+// ===== Contact form =====
+(function contactForm() {
+  const form = document.getElementById('contact-form');
+  if (!form) return;
+
+  const wrap = document.getElementById('contact-form-wrap');
+  const success = document.getElementById('contact-success');
+  const errorEl = document.getElementById('form-error');
+  const btn = document.getElementById('form-btn');
+
+  // Coordonnées injectées uniquement après envoi réussi
+  const c = {
+    e: ['jules', 'renad27', 'gmail.com'].join('@').replace('renad27@', 'renad27@'),
+    p: '06 14 64 54 02',
+    l: 'Caen, France'
+  };
+
+  form.addEventListener('submit', async (ev) => {
+    ev.preventDefault();
+    errorEl.textContent = '';
+
+    if (!form.checkValidity()) {
+      form.reportValidity();
+      return;
+    }
+
+    btn.classList.add('loading');
+    btn.disabled = true;
+
+    try {
+      const res = await fetch(form.action, {
+        method: 'POST',
+        body: new FormData(form),
+        headers: { Accept: 'application/json' }
+      });
+
+      if (res.ok) {
+        document.getElementById('coord-email').textContent = c.e;
+        document.getElementById('coord-phone').textContent = c.p;
+        document.getElementById('coord-location').textContent = c.l;
+        wrap.hidden = true;
+        success.hidden = false;
+      } else {
+        const data = await res.json().catch(() => ({}));
+        errorEl.textContent = (data.errors || []).map(e => e.message).join(' ') || 'Une erreur est survenue, veuillez réessayer.';
+      }
+    } catch {
+      errorEl.textContent = 'Impossible d\'envoyer le message. Vérifiez votre connexion.';
+    }
+
+    btn.classList.remove('loading');
+    btn.disabled = false;
+  });
+})();

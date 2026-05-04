@@ -150,18 +150,58 @@
       <span class="section-head-count">03 / 03</span>
     </div>
 
-    <div class="contact-row">
-      <a href="mailto:julesrenad27@gmail.com" class="contact-item">
-        <div class="contact-label">Email</div>
-        <div class="contact-value">julesrenad27@gmail.com</div>
-      </a>
-      <a href="tel:+33614645402" class="contact-item">
-        <div class="contact-label">Téléphone</div>
-        <div class="contact-value">06 14 64 54 02</div>
-      </a>
-      <div class="contact-item">
-        <div class="contact-label">Localisation</div>
-        <div class="contact-value">Caen, France</div>
+    <!-- Formulaire de contact -->
+    <div id="contact-form-wrap">
+      <p class="contact-intro">Remplissez le formulaire pour me contacter — mes coordonnées vous seront transmises après envoi.</p>
+      <form id="contact-form" action="https://formspree.io/f/xeenazwp" method="POST" novalidate>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="cf-name" class="form-label">Nom</label>
+            <input type="text" id="cf-name" name="name" class="form-input" placeholder="Votre nom" required>
+          </div>
+          <div class="form-group">
+            <label for="cf-email" class="form-label">Email</label>
+            <input type="email" id="cf-email" name="email" class="form-input" placeholder="votre@email.com" required>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="cf-subject" class="form-label">Sujet <span class="form-optional">(optionnel)</span></label>
+          <input type="text" id="cf-subject" name="subject" class="form-input" placeholder="Sujet de votre message">
+        </div>
+        <div class="form-group">
+          <label for="cf-message" class="form-label">Message</label>
+          <textarea id="cf-message" name="message" class="form-input form-textarea" placeholder="Votre message..." required></textarea>
+        </div>
+        <div id="form-error" class="form-error" aria-live="polite"></div>
+        <button type="submit" class="form-submit" id="form-btn">
+          <span class="btn-label">Envoyer</span>
+          <span class="btn-loader" aria-hidden="true"></span>
+        </button>
+      </form>
+    </div>
+
+    <!-- Coordonnées révélées après envoi -->
+    <div id="contact-success" class="contact-success" hidden>
+      <div class="success-msg">
+        <div class="success-icon">✓</div>
+        <div>
+          <p class="success-title">Message envoyé !</p>
+          <p class="success-sub">Merci, je vous réponds dans les plus brefs délais. Voici mes coordonnées.</p>
+        </div>
+      </div>
+      <div class="contact-row">
+        <div class="contact-item">
+          <div class="contact-label">Email</div>
+          <div class="contact-value" id="coord-email"></div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-label">Téléphone</div>
+          <div class="contact-value" id="coord-phone"></div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-label">Localisation</div>
+          <div class="contact-value" id="coord-location"></div>
+        </div>
       </div>
     </div>
 
