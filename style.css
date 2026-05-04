@@ -297,7 +297,7 @@ section.block { margin-bottom: 5rem; }
   content: "";
   position: absolute;
   left: 0; right: 0;
-  top: 60px;
+  top: 59px;
   height: 1px;
   background: var(--line-strong);
   opacity: 0.4;
