@@ -25,7 +25,7 @@
       <a href="competences.html" class="nav-link">Compétences</a>
       <a href="projets.html" class="nav-link">Projets</a>
       <a href="interets.html" class="nav-link">Centres d'intérêt</a>
-      <a href="mailto:julesrenad27@gmail.com" class="nav-cta">Me contacter</a>
+      <a href="me-joindre.html" class="nav-cta">Me contacter</a>
     </div>
     <button class="menu-toggle" aria-label="Menu">☰</button>
   </div>
@@ -140,71 +140,56 @@
     </div>
   </section>
 
-  <!-- CONTACT -->
+  <!-- LANGUES -->
   <section class="block reveal">
     <div class="section-head">
       <div>
-        <span class="eyebrow">Prendre contact</span>
-        <h2>Me joindre</h2>
+        <span class="eyebrow">Maîtrise linguistique</span>
+        <h2>Langues</h2>
       </div>
       <span class="section-head-count">03 / 03</span>
     </div>
 
-    <!-- Formulaire de contact -->
-    <div id="contact-form-wrap">
-      <p class="contact-intro">Remplissez le formulaire pour me contacter — mes coordonnées vous seront transmises après envoi.</p>
-      <form id="contact-form" action="https://formspree.io/f/xeenazwp" method="POST" novalidate>
-        <div class="form-row">
-          <div class="form-group">
-            <label for="cf-name" class="form-label">Nom</label>
-            <input type="text" id="cf-name" name="name" class="form-input" placeholder="Votre nom" required>
+    <div class="lang-grid">
+      <article class="lang-card">
+        <div class="lang-card-head">
+          <span class="lang-flag" aria-hidden="true">
+            <svg viewBox="0 0 60 40" xmlns="http://www.w3.org/2000/svg">
+              <rect width="20" height="40" fill="#0055A4"/>
+              <rect x="20" width="20" height="40" fill="#FFFFFF"/>
+              <rect x="40" width="20" height="40" fill="#EF4135"/>
+            </svg>
+          </span>
+          <div class="lang-name">
+            <h3>Français</h3>
+            <span class="lang-code">FR · fra</span>
           </div>
-          <div class="form-group">
-            <label for="cf-email" class="form-label">Email</label>
-            <input type="email" id="cf-email" name="email" class="form-input" placeholder="votre@email.com" required>
-          </div>
+          <div class="lang-level-badge lang-level-badge--native">Natif</div>
         </div>
-        <div class="form-group">
-          <label for="cf-subject" class="form-label">Sujet <span class="form-optional">(optionnel)</span></label>
-          <input type="text" id="cf-subject" name="subject" class="form-input" placeholder="Sujet de votre message">
-        </div>
-        <div class="form-group">
-          <label for="cf-message" class="form-label">Message</label>
-          <textarea id="cf-message" name="message" class="form-input form-textarea" placeholder="Votre message..." required></textarea>
-        </div>
-        <div class="form-footer">
-          <div id="form-error" class="form-error" aria-live="polite"></div>
-          <button type="submit" class="form-submit" id="form-btn">
-            <span class="btn-label">Envoyer</span>
-            <span class="btn-loader" aria-hidden="true"></span>
-          </button>
-        </div>
-      </form>
-    </div>
 
-    <!-- Coordonnées révélées après envoi -->
-    <div id="contact-success" class="contact-success" hidden>
-      <div class="success-msg">
-        <div class="success-icon">✓</div>
-        <div>
-          <p class="success-title">Message envoyé !</p>
-          <p class="success-sub">Merci, je vous réponds dans les plus brefs délais. Voici mes coordonnées.</p>
+        <p class="lang-note">Langue maternelle — usage quotidien personnel et professionnel.</p>
+      </article>
+
+      <article class="lang-card">
+        <div class="lang-card-head">
+          <span class="lang-flag" aria-hidden="true">
+            <svg viewBox="0 0 60 40" xmlns="http://www.w3.org/2000/svg">
+              <rect width="60" height="40" fill="#012169"/>
+              <path d="M0,0 L60,40 M60,0 L0,40" stroke="#FFFFFF" stroke-width="6"/>
+              <path d="M0,0 L60,40 M60,0 L0,40" stroke="#C8102E" stroke-width="3"/>
+              <path d="M30,0 V40 M0,20 H60" stroke="#FFFFFF" stroke-width="10"/>
+              <path d="M30,0 V40 M0,20 H60" stroke="#C8102E" stroke-width="6"/>
+            </svg>
+          </span>
+          <div class="lang-name">
+            <h3>Anglais</h3>
+            <span class="lang-code">EN · eng</span>
+          </div>
+          <div class="lang-level-badge">B2</div>
         </div>
-      </div>
-      <div class="contact-row">
-        <div class="contact-item">
-          <div class="contact-label">Email</div>
-          <div class="contact-value" id="coord-email"></div>
-        </div>
-        <div class="contact-item">
-          <div class="contact-label">Téléphone</div>
-          <div class="contact-value" id="coord-phone"></div>
-        </div>
-        <div class="contact-item">
-          <div class="contact-label">Localisation</div>
-          <div class="contact-value" id="coord-location"></div>
-        </div>
-      </div>
+
+        <p class="lang-note">Niveau <strong>B2 — utilisateur indépendant avancé</strong> (CECRL). Lecture courante de documentations techniques, échanges professionnels et code review en anglais.</p>
+      </article>
     </div>
   </section>
 

@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Formulaire de contact — Jules Renard, étudiant en BTS SIO.">
+  <meta name="author" content="Jules Renard">
+  <title>Me joindre — Jules Renard</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo">
+      <span class="nav-logo-mark">JR</span>
+      <span>Jules Renard</span>
+    </a>
+    <div class="nav-links">
+      <a href="index.html" class="nav-link">À propos</a>
+      <a href="competences.html" class="nav-link">Compétences</a>
+      <a href="projets.html" class="nav-link">Projets</a>
+      <a href="interets.html" class="nav-link">Centres d'intérêt</a>
+      <a href="me-joindre.html" class="nav-cta">Me contacter</a>
+    </div>
+    <button class="menu-toggle" aria-label="Menu">☰</button>
+  </div>
+</nav>
+
+<main>
+
+  <!-- HERO -->
+  <section class="reveal" style="padding-top: 2.5rem;">
+    <div class="contact-hero">
+      <span class="eyebrow">Prendre contact</span>
+      <h1 class="contact-hero-title">Me <span class="italic">joindre</span>.</h1>
+      <p class="contact-hero-lede">
+        Pour un stage, une alternance, une opportunité ou simplement pour échanger — remplissez le formulaire ci-dessous. Mes coordonnées vous seront transmises après envoi.
+      </p>
+    </div>
+  </section>
+
+  <!-- FORMULAIRE -->
+  <section class="block reveal">
+    <div class="section-head">
+      <div>
+        <span class="eyebrow">Formulaire sécurisé</span>
+        <h2>Écrivez-moi</h2>
+      </div>
+      <span class="section-head-count">01 / 01</span>
+    </div>
+
+    <div id="contact-form-wrap">
+      <form id="contact-form" action="https://formspree.io/f/xeenazwp" method="POST" novalidate>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="cf-name" class="form-label">Nom</label>
+            <input type="text" id="cf-name" name="name" class="form-input" placeholder="Votre nom" required>
+          </div>
+          <div class="form-group">
+            <label for="cf-email" class="form-label">Email</label>
+            <input type="email" id="cf-email" name="email" class="form-input" placeholder="votre@email.com" required>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="cf-subject" class="form-label">Sujet <span class="form-optional">(optionnel)</span></label>
+          <input type="text" id="cf-subject" name="subject" class="form-input" placeholder="Sujet de votre message">
+        </div>
+        <div class="form-group">
+          <label for="cf-message" class="form-label">Message</label>
+          <textarea id="cf-message" name="message" class="form-input form-textarea" placeholder="Votre message..." required></textarea>
+        </div>
+        <div class="form-footer">
+          <div id="form-error" class="form-error" aria-live="polite"></div>
+          <button type="submit" class="form-submit" id="form-btn">
+            <span class="btn-label">Envoyer</span>
+            <span class="btn-loader" aria-hidden="true"></span>
+          </button>
+        </div>
+      </form>
+    </div>
+
+    <!-- Coordonnées révélées après envoi -->
+    <div id="contact-success" class="contact-success" hidden>
+      <div class="success-msg">
+        <div class="success-icon">✓</div>
+        <div>
+          <p class="success-title">Message envoyé !</p>
+          <p class="success-sub">Merci, je vous réponds dans les plus brefs délais. Voici mes coordonnées.</p>
+        </div>
+      </div>
+      <div class="contact-row">
+        <div class="contact-item">
+          <div class="contact-label">Email</div>
+          <div class="contact-value" id="coord-email"></div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-label">Téléphone</div>
+          <div class="contact-value" id="coord-phone"></div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-label">Localisation</div>
+          <div class="contact-value" id="coord-location"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="footer-mark">Jules Renard.</div>
+    <div class="footer-social">
+      <a href="https://github.com/AmberFox12" target="_blank" rel="noopener" class="footer-social-link">GitHub</a>
+      <a href="https://www.linkedin.com/in/jules-renard-60a448257/" target="_blank" rel="noopener" class="footer-social-link">LinkedIn</a>
+    </div>
+    <div class="footer-meta">
+      <span>© 2026 · Portfolio BTS SIO</span>
+      <a href="#" onclick="scrollToTop(); return false;" class="footer-to-top">↑ Haut de page</a>
+    </div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
