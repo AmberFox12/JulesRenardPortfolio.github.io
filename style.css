@@ -685,6 +685,34 @@ section.block:last-child { margin-bottom: 2rem; }
 
 .skill-card--method { border-color: var(--sage); }
 .skill-card--method::before { background: var(--ocre); }
+
+.skill-projects {
+  margin-top: 0.9rem;
+  padding-top: 0.75rem;
+  border-top: 1px solid var(--line);
+}
+.skill-projects-label {
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--ink-3);
+  display: block;
+  margin-bottom: 0.35rem;
+}
+.skill-project-link {
+  display: inline-block;
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: var(--sage-deep);
+  text-decoration: none;
+  margin-right: 0.6rem;
+  transition: color 0.2s var(--ease);
+}
+.skill-project-link:hover { color: var(--ink); text-decoration: underline; }
+
+a.project-tag { text-decoration: none; }
+a.project-tag:hover { border-color: var(--ink); color: var(--ink); }
 .skill-copy {
   font-size: 0.8em;
   color: var(--ink-3);
