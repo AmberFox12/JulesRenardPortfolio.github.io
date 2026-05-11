@@ -623,6 +623,7 @@ section.block:last-child { margin-bottom: 2rem; }
   transition: all 0.3s var(--ease);
   position: relative;
   overflow: hidden;
+  scroll-margin-top: 5rem;
 }
 .skill-card::before {
   content: "";
@@ -759,6 +760,7 @@ a.project-tag:hover { border-color: var(--ink); color: var(--ink); }
   border: 1px solid var(--line);
   border-radius: var(--radius);
   padding: 2rem;
+  scroll-margin-top: 5rem;
   transition: all 0.4s var(--ease);
   display: grid;
   grid-template-columns: 60px 1fr 180px;
